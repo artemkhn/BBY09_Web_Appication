@@ -1,5 +1,11 @@
 
-      .bd-placeholder-img {
+     body{
+     
+     }
+     
+     
+     
+     .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
         -webkit-user-select: none;
@@ -31,6 +37,10 @@
         color:black;
       }
 
+      #logoimg{
+        width: 6%;
+      }
+
       .navbar{
         background-color:wheat;
       }
@@ -42,8 +52,60 @@
 
       .nav-link{
         color:black;
+      }
+
+      .navbar-brand{
+        font-size: 25px;
+      }
+
+
+
+      .px-4start{
+        background-image: url(/images/hiddengem.png);
+        color: white;
+      }
+
+      .column {
+        float: left;
+        width: 33.33%;
+        color:mediumpurple;
         
       }
+      
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      .row{
+        text-align: center;
+      }
+
+      #randall{
+        width: 30%;
+        border-radius:0;
+      }
+
+      #aryan{
+        width: 30%;
+        border-radius: 0;
+      }
+
+      #artem{
+        width: 30%;
+        border-radius: 0;
+      }
+
+      h5{
+        font-size: 18px;
+        color: black;
+      }
+
+
+     
+    
+      
 
         
   
