@@ -1,0 +1,40 @@
+.heading1{
+color: lightblue;
+}
+
+.welcome{
+    font-size: xx-large;
+    color: violet;
+}
+
+.navbar-brand{
+    color: black;
+    font-weight: bold;
+
+  }
+
+  .nav-link{
+    color:black;
+  }
+
+  .logoimg{
+    width: 6%;
+  }
+
+  .navbar{
+    background-color:wheat;
+  }
+
+  .btn{
+    background-color:lightgreen;
+    color:black;
+  }
+
+  .nav-link{
+    color:black;
+  }
+
+  .navbar-brand{
+    font-size: 25px;
+  }
+
