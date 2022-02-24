@@ -3,14 +3,14 @@ color: lightblue;
 }
 
 .welcome{
-    font-size: xx-large;
+    font-size: 50px;
     color: violet;
+    font-weight: bold;
 }
 
 .navbar-brand{
     color: black;
     font-weight: bold;
-
   }
 
   .nav-link{
@@ -38,3 +38,7 @@ color: lightblue;
     font-size: 25px;
   }
 
+.xx{
+  background-color: lightblue;
+
+}
