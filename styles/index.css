@@ -4,12 +4,16 @@ color: lightblue;
 
 .welcome{
     font-size: 50px;
-    color: violet;
+    color:white;
     font-weight: bold;
-}
+    font-size: 70px;
+    text-shadow: 5px 5px 5px mediumpurple;
+
+  }
+
 
 .px-4start{
-  background-image: url(/images/hiddengem.png);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url(/images/restraunt.png);
   color: white;
 }
 .navbar-brand{
