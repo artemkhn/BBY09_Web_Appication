@@ -1,6 +1,6 @@
 
      body{
-     
+      background-color: cornsilk;
      }
      
      
@@ -102,6 +102,12 @@
         color: black;
       }
 
+      #faqtitle{
+        color: mediumpurple;
+        text-decoration: underline;
+      }
+
+      
 
      
     

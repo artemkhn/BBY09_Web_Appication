@@ -29,27 +29,27 @@
   <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container-fluid">
       <img id="logoimg" src="./images/MealVault.png" alt="">
-      <a class="navbar-brand" href="#"><b>MealVault</b></a>
+      <a class="navbar-brand" href="index.html">MealVault</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">About Us</a>
+            <a class="nav-link active" aria-current="page" href="post.html">Post</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="FAQ.html">FAQ</a>
+            <a class="nav-link" href="browse.html">Browse</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Other
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Survey</a></li>
-              <li><a class="dropdown-item" href="#">Contact Us</a></li>
+              <li><a class="dropdown-item" href="favorites.html">Favorites</a></li>
+              <li><a class="dropdown-item" href="aboutus.html">About Us</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Settings</a></li>
+              <li><a class="dropdown-item" href="FAQ.html">FAQ</a></li>
             </ul>
           </li>
           <li class="nav-item">
@@ -57,12 +57,48 @@
           </li>
         </ul>
         <form class="d-flex">
-          
-          <a href="login.html" class="btn btn-outline-secondary" role="button" type="submit">Register/Login</a>
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
       </div>
     </div>
   </nav>
+  
+  <br>
+  <h1 id="faqtitle">Frequently Asked Questions</h1>
+  <br>
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Last Updated</th>
+        <th scope="col">Question</th>
+        <th scope="col">Answer</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td class="update">Feburary 24th, 2022</td>
+        <td>How can i apply preferences to my options?</td>
+        <td>Make sure you are <b>logged-in</b>. Locate to the <b><i>"browse"</i></b> page in the naviation bar <b>></b> Under the search bar, click on the <b>filter</b> icon <b>.</b> select any boxes that fit your personal preferences<b>></b> click <b><i>"Apply"</i></b>.</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td class="update">Feburary 24th, 2022</td>
+        <td>Where can i contact customer support?</td>
+        <td>Please go to the Customer Support Page <b>></b> <b><a id="cutomersup" href="customersupport.html">Customer Support</a></b>.</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td class="update">Feburary, 24th, 2022</td>
+        <td>How can i create a mini-blog?</td>
+        <td>Make sure you are <b>logged-in</b>. Locate the <b><i>"Post"</i></b> page in the navigaton bar <b>></b> Insert a picture, title and description <b>></b> Click the <b><i>"post"</i></b> button at the bottom.</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   
 
   
@@ -86,51 +122,7 @@
       </svg>
 
 
-      <div class="px-4start py-5 my-5 text-center">
-        <br>
-        <br>
-        <!-- <img  src="" alt="" width="125px" height="100px"> -->
-        <h1 class="display-5 fw-bold">MealVault</h1>
-        <div class="col-lg-6 mx-auto">
-          <p class="lead mb-4">A web application that will allow locals and tourists of Vancouver to gain exposure to lesser-known restaurants by creating mini-blogs to share their experiences, unlike web applications like google and yelp, which only allow brief reviews.</p>
-          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-            <!-- <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Primary button</button> -->
-            <!-- <button type="button" class="btn btn-outline-secondary btn-lg px-4">Secondary</button> -->
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-          </div>
-        </div>
-      </div>  
-      
-      
-      
-      <div class="row">
-        <div class="column">
-          <h2><b>CEO</b></h2><br>
-          <img id="artem" src="./images/Artem.jpg" alt=""><br><br>
-          <h5><i>“There are three responses to a piece of design – yes, no, and WOW! Wow is the one to aim for”</i></h5><br><br>
-          <h2><b>Artem Khan</b></h2>
-        </div>
-        <div class="column">
-          <h2><b>Coder</b></h2><br>
-          <img id="aryan" src="./images/Aryan.jpeg" alt=""><br><br>
-          <h5><i>“My code DOESN’T work, I have no idea why. My code WORKS, I have no idea why.”</i></h5><br><br>
-          <h2><b>Aryan Arora</b></h2>
-        </div>
-        <div class="column">
-          <h2><b>Designer</b></h2><br>
-          <img id="randall" src="./images/RandallKong.jpg" alt=""><br><br>
-          <h5><i>“Intuitive design is how we give the user new superpowers."</i></h5><br><br><br>
-          <h2><b>Randall Kong</b></h2>
-        </div>
-      </div>
-
-
+ 
 
   <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
     <div class="col-md-4 d-flex align-items-center">
