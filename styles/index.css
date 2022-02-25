@@ -12,6 +12,13 @@ color: lightblue;
   }
 
 
+.footer{
+  position: absolute;
+  bottom:0;
+   width:100%;
+
+}
+
 .px-4start{
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url(/images/restraunt.png);
   color: white;
