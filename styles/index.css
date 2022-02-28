@@ -4,10 +4,25 @@ color: lightblue;
 
 .welcome{
     font-size: 50px;
-    color: violet;
+    color:white;
     font-weight: bold;
+    font-size: 70px;
+    text-shadow: 5px 5px 5px mediumpurple;
+
+  }
+
+
+.footer{
+  position: absolute;
+  bottom:0;
+   width:100%;
+
 }
 
+.px-4start{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url(/images/restraunt.png);
+  color: white;
+}
 .navbar-brand{
     color: black;
     font-weight: bold;
@@ -41,4 +56,10 @@ color: lightblue;
 .xx{
   background-color: lightblue;
 
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
 }
