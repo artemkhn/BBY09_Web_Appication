@@ -19,14 +19,6 @@
 
   <!-- Firebase 8 Library related CSS CDN go here -->
   <!-- Firebase 8 Library related JS CDN go here-->
-  <!-- Firebase 8 Library related CSS, JS, JQuery go here -->
-  <!-------------------------------------------------------->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
-  <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
 
   <!-- Other libraries go here -->
   <link href="styles/style.css" rel="stylesheet" type="text/css">
@@ -51,7 +43,7 @@
             <a class="nav-link active" aria-current="page" href="#">About Us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">FAQ</a>
+            <a class="nav-link" href="FAQ.html">FAQ</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
@@ -72,9 +64,23 @@
             <a class="nav-link disabled" href="#" tabindex="-1"></a>
           </li>
         </ul>
+        <form class="d-flex">
+
+          <a href="login.html" class="btn btn-outline-secondary" role="button" type="submit">Register/Login</a>
+        </form>
       </div>
     </div>
   </nav>
+
+  <main class="container py-5">
+    <div>
+      <h1>Success!</h1>
+      <p class="lead">The copoun has been emailed to you. Thank you!</p>
+      <p class="lead">
+        <a class="btn btn-success" href="start.html">Home</a>
+      </p>
+    </div>
+  </main>
 
 
 
@@ -102,18 +108,10 @@
     </symbol>
   </svg>
 
-  </br>
-  </br>
-  </br>
-  </br>
-  <div id="firebaseui-auth-container"></div>
-  <div id="loader">Loading...</div>
-  </br>
-  </br>
-  </br>
-  </br>
-  </br>
-  </br>
+
+
+
+
   <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
     <div class="col-md-4 d-flex align-items-center">
       <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
@@ -136,10 +134,8 @@
     </ul>
   </footer>
 
-  <script src="./scripts/firebaseAPI.js"></script>
-  <script src="./scripts/skeleton.js"></script>
-  <script src="./scripts/authentication.js"></script>
-  <script src="./scripts/script.js"></script>
+
+
 
 </body>
 
