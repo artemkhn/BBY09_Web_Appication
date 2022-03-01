@@ -20,6 +20,7 @@
     <!-- Other libraries go here -->
     <link href="styles/style.css" rel="stylesheet" type="text/css">
     <link href="/images/favicon.ico" rel="icon" type="image/x-icon"/>
+    <link href="styles/survey.css" rel="stylesheet" type="text/css">  
     <!-- Link to styles of your own -->
     <!-- <link type="text/css" href="./styles/style.css"> -->
 
@@ -36,20 +37,20 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="aboutus.html">About Us</a>
+            <a class="nav-link active" aria-current="page" href="post.html">Post</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="FAQ.html">FAQ</a>
+            <a class="nav-link" href="browse.html">Browse</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Other
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="survey.html">Survey</a></li>
-              <li><a class="dropdown-item" href="contactinfo.html">Contact Us</a></li>
+              <li><a class="dropdown-item" href="favorites.html">Favorites</a></li>
+              <li><a class="dropdown-item" href="aboutus.html">About Us</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="settings.html">Settings</a></li>
+              <li><a class="dropdown-item" href="FAQ.html">FAQ</a></li>
             </ul>
           </li>
           <li class="nav-item">
@@ -57,7 +58,8 @@
           </li>
         </ul>
         <form class="d-flex">
-          <a class="btn btn-success" href="login.html">Register/Login</a>
+          <input class="form-controlsearch me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
       </div>
     </div>
@@ -83,52 +85,164 @@
             <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.828-1.165c-.315 0-.602.124-.812.325-.801-.573-1.9-.945-3.121-.993l.534-2.501 1.738.372a.83.83 0 1 0 .83-.869.83.83 0 0 0-.744.468l-1.938-.41a.203.203 0 0 0-.153.028.186.186 0 0 0-.086.134l-.592 2.788c-1.24.038-2.358.41-3.17.992-.21-.2-.496-.324-.81-.324a1.163 1.163 0 0 0-.478 2.224c-.02.115-.029.23-.029.353 0 1.795 2.091 3.256 4.669 3.256 2.577 0 4.668-1.451 4.668-3.256 0-.114-.01-.238-.029-.353.401-.181.688-.592.688-1.069 0-.65-.525-1.165-1.165-1.165z"/>
         </symbol>
       </svg>
-      <div class="px-4start py-5 my-5 text-center">
-        <br>
-        <br>
-        <!-- <img  src="" alt="" width="125px" height="100px"> -->
-        <h1 class="display-5 fw-bold">Do you love to explore and try new food?</h1>
-        <div class="col-lg-6 mx-auto">
-          <p class="lead mb-4">Sign-up today to begin a rememerable adventure through the hundreads of hidden gem restaurants and crusines in the lower mainland area.</p>
-          <br>
-          <br>
-          <h4 id="leadcupon"><i>Resgister now to recieve 10,000 reward points added to your account</i></h4>
-          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-            <!-- <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Primary button</button> -->
-            <!-- <button type="button" class="btn btn-outline-secondary btn-lg px-4">Secondary</button> -->
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-          </div>
-        </div>
-      </div>
-      <main class="container py-5">
-        <div class="row">
-          <div class="column">
-            <h2><b>CEO</b></h2><br>
-            <img id="artem" src="./images/Artem.jpg" alt=""><br><br>
-            <h5><i>“There are three responses to a piece of design – yes, no, and WOW! Wow is the one to aim for”</i></h5><br><br>
-            <h2><b>Artem Khan</b></h2>
-          </div>
-          <div class="column">
-            <h2><b>Coder</b></h2><br>
-            <img id="aryan" src="./images/Aryan.jpeg" alt=""><br><br>
-            <h5><i>“My code DOESN’T work, I have no idea why. My code WORKS, I have no idea why.”</i></h5><br><br>
-            <h2><b>Aryan Arora</b></h2>
-          </div>
-          <div class="column">
-            <h2><b>Designer</b></h2><br>
-            <img id="randall" src="./images/RandallKong.jpg" alt=""><br><br>
-            <h5><i>“Intuitive design is how we give the user new superpowers."</i></h5><br><br><br>
-            <h2><b>Randall Kong</b></h2>
-          </div>
-        </div>  
-      </main>
+
+      <div class="mx-0 mx-sm-auto">
+        <div class="card">
+          <div class="card-body">
+            <div class="text-center">
+              <i class="far fa-file-alt fa-4x mb-3 text-primary"></i>
+              <p>
+                <strong>Your opinion matters</strong>
+              </p>
+              <p>
+                <strong>Complete a quick survey to recieve 2,000 reward points.</strong>
+              </p>
+            </div>
       
+            <hr />
+      
+            <form id="form">
+ 
+              <!-- Details -->
+              <div class="form-control">
+                  <label for="name" id="label-name">
+                      Name
+                  </label>
+       
+                  <!-- Input Type Text -->
+                  <input type="text"
+                         id="name"
+                         placeholder="Enter your name" />
+              </div>
+        
+              <div class="form-control">
+                  <label for="email" id="label-email">
+                      Email
+                  </label>
+       
+                  <!-- Input Type Email-->
+                  <input type="email"
+                         id="email"
+                         placeholder="Enter your email" />
+              </div>
+        
+              <div class="form-control">
+                  <label for="age" id="label-age">
+                      Age
+                  </label>
+       
+                  <!-- Input Type Text -->
+                  <input type="text"
+                         id="age"
+                         placeholder="Enter your age (optional)" />
+              </div>
+        
+              <div class="form-control">
+                  <label for="role" id="label-role">
+                      Which option best describes your dietary preference?
+                  </label>
+                   
+                  <!-- Dropdown options -->
+                  <select name="role" id="role">
+                      <option value="vegetarian">Vegetarian</option>
+                      <option value="vegan">Vegan</option>
+                      <option value="Lactose-Intolerant">Lactose-Intolerant</option>
+                      <option value="pescatarian">Pescatarian</option>
+                      <option value="gluten-free">Gluten-Free</option>
+                      <option value="pollotarian">Pollotarian</option>
+                      <option value="kosher">Kosher</option>
+                      <option value="halal">Halal</option>
+                      <option value="keto">Keto</option>
+                      <option value="peanut">Peanut Allergy</option>
+                      <option value="none">None</option>
+                  </select>
+              </div>
+        
+           
+        
+              <div class="form-control">
+                  <label>What restaurants do you enjoy eating at?
+                      <small>(Check all that apply)</small>
+                  </label>
+                  <!-- Input Type Checkbox -->
+                  <label for="inp-1">
+                      <input type="checkbox"
+                             name="inp"> McDonalds</input></label>
+                  <label for="inp-2">
+                      <input type="checkbox"
+                             name="inp"> Subway</input></label>
+                  <label for="inp-3">
+                      <input type="checkbox"
+                             name="inp"> White Spot</input></label>
+                  <label for="inp-4">
+                      <input type="checkbox"
+                             name="inp"> Popeye's</input></label>
+                  <label for="inp-5">
+                      <input type="checkbox"
+                             name="inp"> Chipotle</input></label>
+                  <label for="inp-6">
+                      <input type="checkbox"
+                             name="inp"> Freshii</input></label>
+                  <label for="inp-7">
+                      <input type="checkbox"
+                             name="inp"> Tim Hortons</input></label>
+                  <label for="inp-7">
+                      <input type="checkbox"
+                             name="inp"> Shake Shack</input></label>
+                  <label for="inp-7">
+                      <input type="checkbox"
+                             name="inp"> Boston Pizza</input></label>
+                  <label for="inp-7">
+                      <input type="checkbox"
+                             name="inp"> Starbucks</input></label>
+              </div>
+
+              <div class="form-control">
+                <label>
+                    Would you recommed MealVault
+                    to a friend?
+                </label>
+     
+                <!-- Input Type Radio Button -->
+                <label for="recommed-1">
+                    <input type="radio"
+                           id="recommed-1"
+                           name="recommed">Yes</input>
+                </label>
+                <label for="recommed-2">
+                    <input type="radio"
+                           id="recommed-2"
+                           name="recommed">No</input>
+                </label>
+                <label for="recommed-3">
+                    <input type="radio"
+                           id="recommed-3"
+                           name="recommed">Maybe</input>
+                </label>
+            </div>
+      
+
+              
+        
+              <div class="form-control">
+                  <label for="comment">
+                      Any comments or suggestions
+                  </label>
+       
+                  <!-- multi-line text input control -->
+                  <textarea name="comment" id="comment"
+                      placeholder="Enter your comment here">
+                  </textarea>
+              </div>
+        
+              <!-- Multi-line Text Input Control -->
+              <button id="buttonsurvey" type="submit" value="submit">
+                  Submit
+              </button>
+          </form>
+
+      
+
 
 
 

@@ -1,0 +1,16 @@
+.px-4about{
+    background-image: url(/images/ftruck.png);
+    color: white;
+  }
+
+  #aboutustitle{
+    font-size: 80px;
+    text-shadow: 5px 5px 5px mediumpurple;
+    
+  }
+  
+  #aboutdesc{
+    text-align: center;
+  }
+
+ 
