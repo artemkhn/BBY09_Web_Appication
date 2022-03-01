@@ -108,6 +108,18 @@
         text-decoration: underline;
       }
 
+      #addquestions{
+        background-color: lightgrey;
+      }
+
+      #leadcupon{
+        color: tomato;
+      }
+
+      .lead{
+        font-size: 25px;
+      }
+
       
 
      

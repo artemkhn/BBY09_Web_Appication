@@ -63,3 +63,12 @@ color: lightblue;
     font-size: 3.5rem;
   }
 }
+
+#preferences{
+  width: 20%;
+  background-color: white;
+}
+
+#preferencesbutton:a:hover{
+  width: 30%;
+}
