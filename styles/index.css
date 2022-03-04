@@ -73,6 +73,7 @@ color: lightblue;
   width: 30%;
 }
 
+<<<<<<< HEAD
 
 
 
@@ -84,4 +85,10 @@ color: lightblue;
 
 
 
+=======
+.card-image {
+  width: 100%;
+  height: 250px;
+}
+>>>>>>> 8cad9b6e176aba37cf970c7d34cae78b682fc209
 
