@@ -72,3 +72,9 @@ color: lightblue;
 #preferencesbutton:a:hover{
   width: 30%;
 }
+
+.card-image {
+  width: 100%;
+  height: 250px;
+}
+
