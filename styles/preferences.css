@@ -1,0 +1,39 @@
+#pref{
+    text-align: center;
+    position: relative;  
+}    
+
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.px-4pref{
+    background-image: url(/images/pref.png);
+    color: white;
+}
+
+#applybutton {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 8px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-right: 20px;
+  }
+
+  #resetbutton{
+    background-color: tomato; /* Green */
+    border: none;
+    color: white;
+    padding: 8px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+
+  }
