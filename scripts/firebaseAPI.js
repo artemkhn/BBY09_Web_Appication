@@ -16,6 +16,3 @@ var firebaseConfig = {
 //--------------------------------------------
 const app = firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
-var restaurantdb = firebase.database().ref("restaurantForm");
-
-var firebaseRef = firebase.database().ref("restaurantForm");
