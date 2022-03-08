@@ -78,3 +78,10 @@ color: lightblue;
   height: 250px;
 }
 
+.card {
+  padding: 3%;
+}
+
+.more {
+  text-decoration: none;
+}
