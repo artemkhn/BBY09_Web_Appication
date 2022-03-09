@@ -40,7 +40,7 @@ function displayCards(collection) {
                 //update title and text and image
                 newcard.querySelector('.card-title').innerHTML = name;
                 newcard.querySelector('.card-text').innerHTML = description;
-                newcard.querySelector('.card-image').src = "./images/" + collection + ".jpg"; //hikes.jpg
+                newcard.querySelector('.card-image').src = "./images/" + name + ".jpg"; //hikes.jpg
 
                 //give unique ids to all elements for future use
                 // newcard.querySelector('.card-title').setAttribute("id", "ctitle" + i);
