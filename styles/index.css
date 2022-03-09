@@ -89,3 +89,27 @@ color: lightblue;
 .more {
   text-decoration: none;
 }
+
+#addpost{
+  position:fixed;
+ top:0;
+ z-index: 1;
+ margin-left: 92%;
+ margin-top: 41%;
+}
+
+#addpost > p{
+  visibility: hidden;
+}
+
+#addpost:hover > p{
+  visibility: visible;
+  
+}
+
+#addpost:hover{
+  
+}
+
+
+
