@@ -54,3 +54,4 @@ function displayCards(collection) {
         })
 }
 displayCards("mygems");
+
