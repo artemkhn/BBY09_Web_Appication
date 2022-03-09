@@ -1,17 +1,16 @@
 function writeCards() {
     //define a variable for the collection you want to create in Firestore to populate data
-    var cardsRef = db.collection("restaurants");
+    var cardsRef = db.collection("mygems");
 
     cardsRef.add({
-        code: "001",
         name: "Kissa Tanto", //replace with your own city?
         city: "Vancouver",
         province: "BC",
+        patio: "Yes",
         price: "$$$",
         description: "Italian-Japanese cuisine & cocktails served in a chic space inspired by 1960's Tokyo jazz cafes."
     });
     cardsRef.add({
-        code: "002",
         name: "Tacofino Taco Bar", //replace with your own city?
         city: "Vancouver",
         province: "BC",
@@ -19,7 +18,6 @@ function writeCards() {
         description: "Casual, contemporary restaurant with West coast takes on classic Mexican food & a full bar."
     });
     cardsRef.add({
-        code: "003",
         name: "Lunch Lady", //replace with your own city?
         city: "Vancouver",
         province: "BC",
@@ -27,6 +25,7 @@ function writeCards() {
         description: "Casual eatery offering Vietnamese staples such as pho, noodles & meat plates, plus unique cocktails."
     });
 }
+
 function displayCards(collection) {
     let cardTemplate = document.getElementById("cardTemplate");
 
@@ -41,7 +40,7 @@ function displayCards(collection) {
                 //update title and text and image
                 newcard.querySelector('.card-title').innerHTML = name;
                 newcard.querySelector('.card-text').innerHTML = description;
-                newcard.querySelector('.card-image').src = "/images/" + name + ".jpg"; //hikes.jpg
+                newcard.querySelector('.card-image').src = "./images/" + collection + ".jpg"; //hikes.jpg
 
                 //give unique ids to all elements for future use
                 // newcard.querySelector('.card-title').setAttribute("id", "ctitle" + i);
@@ -54,4 +53,5 @@ function displayCards(collection) {
             })
         })
 }
-displayCards("restaurants");
+displayCards("mygems");
+

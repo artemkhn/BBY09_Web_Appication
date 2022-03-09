@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Shizuru&display=swap');
+* {
+  font-family: 'Ubuntu';
+}
 .heading1{
 color: lightblue;
 }
@@ -90,8 +94,8 @@ color: lightblue;
   position:fixed;
  top:0;
  z-index: 1;
- margin-left: 80%;
- margin-top: 40%;
+ margin-left: 92%;
+ margin-top: 41%;
 }
 
 #addpost > p{
