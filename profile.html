@@ -33,6 +33,7 @@
   <link href="/images/favicon.ico" rel="icon" type="image/x-icon" />
   <!-- Link to styles of your own -->
   <link rel="stylesheet" href="./styles/index.css">
+  <link rel="stylesheet" href="./styles/profile.css">
   <!-- <link type="text/css" href="./styles/style.css"> -->
 
 </head>
@@ -78,40 +79,22 @@
     </div>
   </nav>
 
-
-  <div class="px-4start py-5 my-5 text-center xx">
+  <div>
     <br>
     <br>
-    <!-- <img  src="./images/MealVault.png" alt="" width="125px" height="100px"> -->
-    <!-- <h1 class="display-5 fw-bold heading1">MealVault</h1> -->
-    <div class="col-lg-6 mx-auto">
-      <p class="lead mb-4 welcome">Welcome, <span id="name-goes-here"></span></p>
-      <br>
-      <br>
-      <br>
-      <form class="d-flex">
-        <a id="preferencesbutton" href="preferences.html"><img id="preferences" src="./images/preferences.png"
-            alt=""></a>
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <input class="form-control me-2" type="search" placeholder="Location (ex. Vancouver, BC)" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
-      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-        <!-- <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Primary button</button> -->
-        <!-- <button type="button" class="btn btn-outline-secondary btn-lg px-4">Secondary</button> -->
-        <br>
-        <br>
-
-        <br>
-        <br>
-        <br>
-      </div>
-    </div>
+    <h1 id="userview"><span id="name-goes-here"></span></h1>
+    <br>
+    <h3 id="usernameprof">Name: <span id="name-goes-here"></span></h3>
+    <h3 id="usernameprof">Email: <span id="name-goes-here"></span></h3>
+    
+    <br>
+    
+    <br>
   </div>
+  
   <div class="container">
-    <h1 class="d-flex justify-content-center align-content-center">Hidden Gems</h1>
-    <p class="d-flex justify-content-center align-content-center">Gems suggested by other users. What are you waiting
-      for?</p>
+    <h1 class="d-flex justify-content-center align-content-center">Your Hidden Gems</h1>
+    <p class="d-flex justify-content-center align-content-center"></p>
     <!-- Here is container for cards  -->
     <div class="container">
       <div id="mygems-go-here" class="row row-cols-auto justify-content-center">
@@ -180,6 +163,7 @@
   <script src="./scripts/firebaseAPI.js"></script>
   <script src="./scripts/profile.js"></script>
   <script src="./scripts/authentication.js"></script>
+  <script src="./scripts/cards.js"></script>
   <script src="./scripts/main.js"></script>
 </body>
 
