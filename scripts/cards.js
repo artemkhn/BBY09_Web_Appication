@@ -38,12 +38,14 @@ function displayCards() {
                 var name = doc.data().name; // get value of the "name" key
                 var description = doc.data().description; // get value of the "details" key
                 var gemID = doc.data().id; //gets the unique ID field
+                var likes = doc.data().likes;
                 var newcard = cardTemplate.content.cloneNode(true);
 
                 //update title and text and image
                 let testGemCard = cardTemplate.content.cloneNode(true);
                 testGemCard.querySelector('.card-title').innerHTML = name;
                 testGemCard.querySelector('.card-length').innerHTML = description;
+                testGemCard.querySelector('.likes-slot').innerHTML = likes;
                 testGemCard.querySelector('a').onclick = () => setHikeData(gemID);
                 testGemCard.querySelector('i').onclick = () => addLikes(gemID);
                 testGemCard.querySelector('img').src = `./images/${gemID}.jpg`;

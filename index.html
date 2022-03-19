@@ -21,14 +21,13 @@
 
   <!-- Firebase 8 Library related CSS CDN go here -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
-    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
   <!-- Firebase 8 Library related JS CDN go here-->
 
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
   <!-- Other libraries go here -->
   <link href="styles/style.css" rel="stylesheet" type="text/css">
@@ -115,6 +114,10 @@
     <h1 class="d-flex justify-content-center align-content-center">Hidden Gems</h1>
     <p class="d-flex justify-content-center align-content-center">Suggested Gems. What are you waiting
       for?</p>
+    <div class="d-flex flex-column align-items-center" id="addpost">
+      <a id="addapost" href="/addrestaurant.html"><img src="./images/addpost.png"></a>
+      <p>Add your gem</p>
+    </div>
     <!-- Here is container for cards  -->
     <div class="container">
       <div id="GemCardGroup" class="row row-cols-auto justify-content-center">
@@ -126,11 +129,12 @@
               <p class="card-length">Some quick example text to build on the card title and make up the bulk of the
                 card's content.</p>
               <a href="#" class="btn btn-primary" style="float: right">Read more</a>
-              <i class="material-icons" onclick="addLikes(gemID)" style="float: left">thumb_up</i>
+              <i onclick="addLikes(gemID)" style="float: left"><img src="./images/heart.png"></i>
+              <p class="likes-slot" style="float: left;">text here</p>
             </div>
           </div>
         </template>
-        
+
       </div>
     </div>
   </div>
@@ -159,11 +163,30 @@
     </symbol>
   </svg>
 
-      <div id="addpost">
-        <a id="addapost" href="/addrestaurant.html"><img src="./images/addpost.png"></a>
-        <p>Add Post</p>
-      </div>
-      
+  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <div class="col-md-4 d-flex align-items-center">
+      <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+        <svg class="bi" width="30" height="24">
+          <use xlink:href="#egg"></use>
+        </svg>
+      </a>
+      <span class="text-muted">© 2022 MealVault, Inc</span>
+    </div>
+    <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+      <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24">
+            <use xlink:href="#reddit"></use>
+          </svg></a></li>
+      <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24">
+            <use xlink:href="#facebook"></use>
+          </svg></a></li>
+      <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24">
+            <use xlink:href="#instagram"></use>
+          </svg></a></li>
+    </ul>
+  </footer>
+
+
+
 
   <script src="./scripts/firebaseAPI.js"></script>
   <script src="./scripts/cards.js"></script>
