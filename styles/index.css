@@ -24,7 +24,7 @@ color: lightblue;
 }
 
 .px-4start{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url(/images/restraunt.png);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.658), rgba(0, 0, 0, 0.452)), url(/images/restraunt.png);
   color: white;
 }
 .navbar-brand{
@@ -60,6 +60,10 @@ color: lightblue;
 .xx{
   background-color: lightblue;
 
+}
+
+.filterbtn {
+  background-color: beige;
 }
 
 @media (min-width: 768px) {

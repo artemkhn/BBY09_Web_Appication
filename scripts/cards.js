@@ -31,6 +31,7 @@ function writeCards() {
 function displayCards() {
     let cardTemplate = document.getElementById("cardTemplate");
     let hikeCardGroup = document.getElementById("hikeCardGroup");
+    
 
     db.collection("restaurants").get()
         .then(allRestaurants => {
@@ -62,7 +63,6 @@ function displayCards() {
 
 }
 
-displayCards();
 function setHikeData(code){
     localStorage.setItem ('gemID', id);
 }
