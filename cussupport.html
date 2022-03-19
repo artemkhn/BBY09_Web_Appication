@@ -13,13 +13,25 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- Boostrap Library JS CDN  go here -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+   </script>
     <!-- Firebase 8 Library related CSS CDN go here -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css"/>
     <!-- Firebase 8 Library related JS CDN go here-->
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 
     <!-- Other libraries go here -->
     <link href="styles/style.css" rel="stylesheet" type="text/css">
     <link href="/images/favicon.ico" rel="icon" type="image/x-icon"/>
+   
     <!-- Link to styles of your own -->
     <!-- <link type="text/css" href="./styles/style.css"> -->
 
@@ -47,7 +59,6 @@
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li><a class="dropdown-item" href="profile.html">My Profile</a></li>
-              <li><a class="dropdown-item" href="rewards.html">Rewards</a></li>
               <li><a class="dropdown-item" href="favorites.html">Favorites</a></li>
               <li><a class="dropdown-item" href="aboutus.html">About Us</a></li>
               <li><hr class="dropdown-divider"></li>
@@ -65,55 +76,51 @@
       </div>
     </div>
   </nav>
-  
-  <br>
-  <h1 id="faqtitle">Frequently Asked Questions</h1>
-  <br>
-  <table class="table">
-    <thead class="thead-dark">
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Last Updated</th>
-        <th scope="col">Question</th>
-        <th scope="col">Answer</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td class="update">Feburary 24th, 2022</td>
-        <td>How can i apply preferences to my options?</td>
-        <td>Make sure you are <b>logged-in</b>. Locate to the <b><i>"browse"</i></b> page in the naviation bar <b>></b> Under the search bar, click on the <b>filter</b> icon <b>.</b> select any boxes that fit your personal preferences<b>></b> click <b><i>"Apply"</i></b>.</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td class="update">Feburary 24th, 2022</td>
-        <td>Where can i contact customer support?</td>
-        <td>Please go to the Customer Support Page <b>></b> <b><a id="cutomersup" href="customersupport.html">Customer Support</a></b>.</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td class="update">Feburary 24th, 2022</td>
-        <td>How can i create a mini-blog?</td>
-        <td>Make sure you are <b>logged-in</b>. Locate the <b><i>"Post"</i></b> page in the navigaton bar <b>></b> Insert a picture, title and description <b>></b> Click the <b><i>"post"</i></b> button at the bottom.</td>
-      </tr>
-      <tr>
-        <th scope="row">4</th>
-        <td class="update">March, 10th, 2022</td>
-        <td>How can i collect reward points?</td>
-        <td>Make sure you are <b>logged-in</b>. You can aquire points by signing up for our <b>newsletter</b>, writing <b>reviews</b> and <b>sharing posts</b>.</td>
-      </tr>
-      <th scope="row">5</th>
-        <td class="update">March, 10th, 2022</td>
-        <td>How can i make a mini-blog?</td>
-        <td>Make sure you are <b>logged-in</b>. <b>Click</b> the <i><b>plus</b></i> button on the home page <b>></b><b> Fill</b> out all the aspects of the form <b>></b><b> Click</b><i><b> submit</b></i>.</td>
-      </tr>
-    </tbody>
-  </table>
 
-  <h3 id="addquestions">Any additional questions, please contact us at <a class="customersup" href="customersupport.html">Customer Support</a>.</h3>
+  <div class="container">
+    <br>
+    <br>
+    <h1 class="d-flex justify-content-center align-content-center">Contact Customer Support</h1>
+    <p class="d-flex justify-content-center align-content-center">Ask questions, leave feedback and give us reccomendations</p>
+    <!-- Here is container for cards  -->
+    <div class="container">
+      <form>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Subject</label>
+          <input type="text" class="form-control" id="subject" placeholder="Subject">
+        </div><br>
+        
+          <div class="form-group">
+            <label for="exampleFormControlTextarea1">Description</label>
+            <textarea class="form-control" id="description" rows="9"></textarea>
+          </div>
+          <br>
+          <!--Flooded--> 
+          <label>Urgent<span style="display:inline-block; width: 26pt;"></span></label>
   
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="urgent" value="Yes">
+            <label>Yes</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="urgent" value="No">
+            <label>No</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="urgent" value="Moderate" checked="">
+            <label>Moderate</label>
+          </div>
+          <br>
+          <!--Scramble-->
+
   
+          <br>
+          <div class="d-flex justify-content-end">
+            <button type="button" class="btn btn-lg btn-primary pull-right" onclick="writeSupport()">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
   
 
   
@@ -137,7 +144,10 @@
       </svg>
 
 
- 
+      
+
+
+
 
   <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
     <div class="col-md-4 d-flex align-items-center">
@@ -154,7 +164,11 @@
   </footer>
     
   
-  
+  <script src="./scripts/firebaseAPI.js"></script>
+  <script src="./scripts/cards.js"></script>
+  <script src="./scripts/authentication.js"></script>
+  <script src="./scripts/main.js"></script>
+  <script src="./scripts/contactus.js"></script>
 
 </body>
 
