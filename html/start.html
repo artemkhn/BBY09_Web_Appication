@@ -18,7 +18,7 @@
     <!-- Firebase 8 Library related JS CDN go here-->
 
     <!-- Other libraries go here -->
-    <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <link href="/styles/style.css" rel="stylesheet" type="text/css">
     <link href="/images/favicon.ico" rel="icon" type="image/x-icon"/>
     <!-- Link to styles of your own -->
     <!-- <link type="text/css" href="./styles/style.css"> -->
@@ -28,92 +28,37 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container-fluid">
-      <img id="logoimg" src="./images/MealVault.png" alt="">
-      <a class="navbar-brand" href="index.html">MealVault</a>
+      <img id="logoimg" src="/images/MealVault.png" alt="">
+      <a class="navbar-brand" href="index.html"><b>MealVault</b></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="post.html">Post</a>
+            <a class="nav-link active" aria-current="page" href="aboutus.html">About Us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="browse.html">Browse</a>
+            <a class="nav-link" href="FAQ.html">FAQ</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Other
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="profile.html">My Profile</a></li>
-              <li><a class="dropdown-item" href="rewards.html">Rewards</a></li>
-              <li><a class="dropdown-item" href="favorites.html">Favorites</a></li>
-              <li><a class="dropdown-item" href="aboutus.html">About Us</a></li>
+              <li><a class="dropdown-item" href="survey.html">Survey</a></li>
+              <li><a class="dropdown-item" href="contactus.html">Contact Us</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="FAQ.html">FAQ</a></li>
+              <li><a class="dropdown-item" href="settings.html">Settings</a></li>
             </ul>
           </li>
           <li class="nav-item">
             <a class="nav-link disabled" href="#" tabindex="-1"></a>
           </li>
         </ul>
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
       </div>
     </div>
   </nav>
-  
-  <br>
-  <h1 id="faqtitle">Frequently Asked Questions</h1>
-  <br>
-  <table class="table">
-    <thead class="thead-dark">
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Last Updated</th>
-        <th scope="col">Question</th>
-        <th scope="col">Answer</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td class="update">Feburary 24th, 2022</td>
-        <td>How can i apply preferences to my options?</td>
-        <td>Make sure you are <b>logged-in</b>. Locate to the <b><i>"browse"</i></b> page in the naviation bar <b>></b> Under the search bar, click on the <b>filter</b> icon <b>.</b> select any boxes that fit your personal preferences<b>></b> click <b><i>"Apply"</i></b>.</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td class="update">Feburary 24th, 2022</td>
-        <td>Where can i contact customer support?</td>
-        <td>Please go to the Customer Support Page <b>></b> <b><a id="cutomersup" href="customersupport.html">Customer Support</a></b>.</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td class="update">Feburary 24th, 2022</td>
-        <td>How can i create a mini-blog?</td>
-        <td>Make sure you are <b>logged-in</b>. Locate the <b><i>"Post"</i></b> page in the navigaton bar <b>></b> Insert a picture, title and description <b>></b> Click the <b><i>"post"</i></b> button at the bottom.</td>
-      </tr>
-      <tr>
-        <th scope="row">4</th>
-        <td class="update">March, 10th, 2022</td>
-        <td>How can i collect reward points?</td>
-        <td>Make sure you are <b>logged-in</b>. You can aquire points by signing up for our <b>newsletter</b>, writing <b>reviews</b> and <b>sharing posts</b>.</td>
-      </tr>
-      <th scope="row">5</th>
-        <td class="update">March, 10th, 2022</td>
-        <td>How can i make a mini-blog?</td>
-        <td>Make sure you are <b>logged-in</b>. <b>Click</b> the <i><b>plus</b></i> button on the home page <b>></b><b> Fill</b> out all the aspects of the form <b>></b><b> Click</b><i><b> submit</b></i>.</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <h3 id="addquestions">Any additional questions, please contact us at <a class="customersup" href="customersupport.html">Customer Support</a>.</h3>
-  
-  
   
 
   
@@ -135,9 +80,55 @@
             <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.828-1.165c-.315 0-.602.124-.812.325-.801-.573-1.9-.945-3.121-.993l.534-2.501 1.738.372a.83.83 0 1 0 .83-.869.83.83 0 0 0-.744.468l-1.938-.41a.203.203 0 0 0-.153.028.186.186 0 0 0-.086.134l-.592 2.788c-1.24.038-2.358.41-3.17.992-.21-.2-.496-.324-.81-.324a1.163 1.163 0 0 0-.478 2.224c-.02.115-.029.23-.029.353 0 1.795 2.091 3.256 4.669 3.256 2.577 0 4.668-1.451 4.668-3.256 0-.114-.01-.238-.029-.353.401-.181.688-.592.688-1.069 0-.65-.525-1.165-1.165-1.165z"/>
         </symbol>
       </svg>
+      <div class="px-4start py-4 my-4 text-center">
+        <br>
+        <br>
+        <!-- <img  src="" alt="" width="125px" height="100px"> -->
+        <h1 class="display-5 fw-bold">Do you love to explore and try new food?</h1>
+        <div class="col-lg-6 mx-auto">
+          <p class="lead mb-4">Sign-up today to begin a rememerable adventure through the hundreads of hidden gem restaurants and crusines in the lower mainland area.</p>
+          <br>
+          <form class="d-flex justify-content-center align-content-center">
+            <a class="btn btn-success" href="login.html">Register/Login</a>
+          </form>
+          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <!-- <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Primary button</button> -->
+            <!-- <button type="button" class="btn btn-outline-secondary btn-lg px-4">Secondary</button> -->
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+          </div>
+        </div>
+      </div>
+      <main class="container py-5">
+        <div class="row">
+          <div class="column">
+            <h2><b>CEO</b></h2><br>
+            <img id="artem" src="/images/Artem.jpg" alt=""><br><br>
+            <h5><i>“There are three responses to a piece of design – yes, no, and WOW! Wow is the one to aim for”</i></h5><br><br>
+            <h2><b>Artem Khan</b></h2>
+          </div>
+          <div class="column">
+            <h2><b>Coder</b></h2><br>
+            <img id="aryan" src="/images/Aryan.jpeg" alt=""><br><br>
+            <h5><i>“My code DOESN’T work, I have no idea why. My code WORKS, I have no idea why.”</i></h5><br><br>
+            <h2><b>Aryan Arora</b></h2>
+          </div>
+          <div class="column">
+            <h2><b>Designer</b></h2><br>
+            <img id="randall" src="/images/RandallKong.jpg" alt=""><br><br>
+            <h5><i>“Intuitive design is how we give the user new superpowers."</i></h5><br><br>
+            <h2><b>Randall Kong</b></h2>
+          </div>
+        </div>  
+      </main>
+      
 
 
- 
 
   <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
     <div class="col-md-4 d-flex align-items-center">

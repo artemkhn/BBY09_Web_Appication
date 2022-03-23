@@ -18,9 +18,9 @@
     <!-- Firebase 8 Library related JS CDN go here-->
 
     <!-- Other libraries go here -->
-    <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <link href="/styles/style.css" rel="stylesheet" type="text/css">
     <link href="/images/favicon.ico" rel="icon" type="image/x-icon"/>
-    <link href="styles/survey.css" rel="stylesheet" type="text/css">  
+    <link href="/styles/preferences.css" rel="stylesheet" type="text/css">
     <!-- Link to styles of your own -->
     <!-- <link type="text/css" href="./styles/style.css"> -->
 
@@ -29,8 +29,8 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container-fluid">
-      <img id="logoimg" src="./images/MealVault.png" alt="">
-      <a class="navbar-brand" href="index.html"><b>MealVault</b></a>
+      <img id="logoimg" src="/images/MealVault.png" alt="">
+      <a class="navbar-brand" href="index.html">MealVault</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -59,12 +59,102 @@
           </li>
         </ul>
         <form class="d-flex">
-          <input class="form-controlsearch me-2" type="search" placeholder="Search" aria-label="Search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
       </div>
     </div>
   </nav>
+
+  <div class="px-4pref py-5 my-5 text-center">
+    <br>
+    <!-- <img  src="" alt="" width="125px" height="100px"> -->
+    <h1 class="display-5 fw-bold">Food Preferences</h1>
+    <div class="col-lg-6 mx-auto">
+      <br>
+      <p class="lead mb-4">Apply any filters down below, to perfectly match your desired food options</p>
+      <br>
+      <br>
+      
+
+      <form id="pref">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Rating</button>
+        <ul class="dropdown-menu">
+          <li> &nbsp; <input type="checkbox"> &nbsp; 1 Star</li>
+          <li> &nbsp; <input type="checkbox"> &nbsp; 2 Stars</li>
+          <li> &nbsp; <input type="checkbox"> &nbsp; 3 Stars</li>
+          <li> &nbsp; <input type="checkbox"> &nbsp; 4 Stars</li>
+          <li> &nbsp; <input type="checkbox"> &nbsp; 5 Stars</li>
+          <li><hr class="dropdown-divider"></li>
+        </ul>
+    
+        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Price</button>
+        <ul class="dropdown-menu">
+          <li> &nbsp; <input type="checkbox"> &nbsp; Under $10</li>
+          <li> &nbsp; <input type="checkbox"> &nbsp; $10 - $20</li>
+          <li> &nbsp; <input type="checkbox"> &nbsp; $20 - $30</li>
+          <li> &nbsp; <input type="checkbox"> &nbsp; $40 - $50</li>
+          <li> &nbsp; <input type="checkbox"> &nbsp; Above $50</li>
+          <li><hr class="dropdown-divider"></li>
+        </ul>
+    
+       
+    
+        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Dietary Preferences</button>
+        <ul class="dropdown-menu">
+          <li> &nbsp; <input type="checkbox"> &nbsp; Vegetarian</li>
+          <li> &nbsp; <input type="checkbox"> &nbsp; Vegan</li>
+          <li> &nbsp; <input type="checkbox"> &nbsp; Lactose-Free</li>
+          <li> &nbsp; <input type="checkbox"> &nbsp; Pescatarian</li>
+          <li> &nbsp; <input type="checkbox"> &nbsp; Gluten-Free</li>
+          <li> &nbsp; <input type="checkbox"> &nbsp; Kosher</li>
+          <li> &nbsp; <input type="checkbox"> &nbsp; Halal</li>
+          <li> &nbsp; <input type="checkbox"> &nbsp; Keto</li>
+          <li> &nbsp; <input type="checkbox"> &nbsp; Peanut-Free</li>
+          <li><hr class="dropdown-divider"></li>
+        </ul>
+    
+        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Categories</button>
+        <ul class="dropdown-menu">
+          <li> &nbsp; <input type="checkbox"> &nbsp; Fast Food</li>
+          <li> &nbsp; <input type="checkbox"> &nbsp; Dine-In</li>
+          <li> &nbsp; <input type="checkbox"> &nbsp; Western</li>
+          <li> &nbsp; <input type="checkbox"> &nbsp; Southern</li>
+          <li> &nbsp; <input type="checkbox"> &nbsp; Indian</li>
+          <li> &nbsp; <input type="checkbox"> &nbsp; Italian</li>
+          <li> &nbsp; <input type="checkbox"> &nbsp; Asian</li>
+          <li> &nbsp; <input type="checkbox"> &nbsp; Persian</li>
+          <li><hr class="dropdown-divider"></li>
+          
+        </ul>
+    
+    
+     </form>
+     <br>
+     <br>
+     <br>
+     <form>
+      <button id="applybutton" type="button" onclick="location.href='index.html'">Apply</button>
+      <button id="resetbutton" type="button" onclick="location.href='preferences.html'">Reset</button>
+     </form>
+     <br>
+     <br>
+     <br>
+     <br>
+     
+     
+      
+      
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        <!-- <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Primary button</button> -->
+        <!-- <button type="button" class="btn btn-outline-secondary btn-lg px-4">Secondary</button> -->
+      
+      </div>
+    </div>
+  </div>
+  
+
+  
   
 
   
@@ -87,160 +177,6 @@
         </symbol>
       </svg>
 
-      <div class="mx-0 mx-sm-auto">
-        <div class="card">
-          <div class="card-body">
-            <div class="text-center">
-              <i class="far fa-file-alt fa-4x mb-3 text-primary"></i>
-              <p>
-                <strong>Your opinion matters</strong>
-              </p>
-              <p>
-                <strong>Complete a quick survey to recieve 2,000 reward points.</strong>
-              </p>
-            </div>
-      
-            <hr />
-      
-            <form id="form">
- 
-              <!-- Details -->
-              <div class="form-control">
-                  <label for="name" id="label-name">
-                      Name
-                  </label>
-       
-                  <!-- Input Type Text -->
-                  <input type="text"
-                         id="name"
-                         placeholder="Enter your name" />
-              </div>
-        
-              <div class="form-control">
-                  <label for="email" id="label-email">
-                      Email
-                  </label>
-       
-                  <!-- Input Type Email-->
-                  <input type="email"
-                         id="email"
-                         placeholder="Enter your email" />
-              </div>
-        
-              <div class="form-control">
-                  <label for="age" id="label-age">
-                      Age
-                  </label>
-       
-                  <!-- Input Type Text -->
-                  <input type="text"
-                         id="age"
-                         placeholder="Enter your age (optional)" />
-              </div>
-        
-              <div class="form-control">
-                  <label for="role" id="label-role">
-                      Which option best describes your dietary preference?
-                  </label>
-                   
-                  <!-- Dropdown options -->
-                  <select name="role" id="role">
-                      <option value="vegetarian">Vegetarian</option>
-                      <option value="vegan">Vegan</option>
-                      <option value="Lactose-Intolerant">Lactose-Intolerant</option>
-                      <option value="pescatarian">Pescatarian</option>
-                      <option value="gluten-free">Gluten-Free</option>
-                      <option value="pollotarian">Pollotarian</option>
-                      <option value="kosher">Kosher</option>
-                      <option value="halal">Halal</option>
-                      <option value="keto">Keto</option>
-                      <option value="peanut">Peanut Allergy</option>
-                      <option value="none">None</option>
-                  </select>
-              </div>
-        
-           
-        
-              <div class="form-control">
-                  <label>What restaurants do you enjoy eating at?
-                      <small>(Check all that apply)</small>
-                  </label>
-                  <!-- Input Type Checkbox -->
-                  <label for="inp-1">
-                      <input id="inp-1" type="checkbox"
-                             name="inp"> McDonalds</input></label>
-                  <label for="inp-2">
-                      <input id="inp-2" type="checkbox"
-                             name="inp"> Subway</input></label>
-                  <label for="inp-3">
-                      <input id="inp-3" type="checkbox"
-                             name="inp"> White Spot</input></label>
-                  <label for="inp-4">
-                      <input id="inp-4" type="checkbox"
-                             name="inp"> Popeye's</input></label>
-                  <label for="inp-5">
-                      <input id="inp-5" type="checkbox"
-                             name="inp"> Chipotle</input></label>
-                  <label for="inp-6">
-                      <input id="inp-6" type="checkbox"
-                             name="inp"> Freshii</input></label>
-                  <label for="inp-7">
-                      <input id="inp-7" type="checkbox"
-                             name="inp"> Tim Hortons</input></label>
-                  <label for="inp-8">
-                      <input id="inp-8" type="checkbox"
-                             name="inp"> Shake Shack</input></label>
-                  <label for="inp-9">
-                      <input id="inp-9" type="checkbox"
-                             name="inp"> Boston Pizza</input></label>
-                  <label for="inp-10">
-                      <input id="inp-10" type="checkbox"
-                             name="inp"> Starbucks</input></label>
-              </div>
-
-              <div class="form-control">
-                <label>
-                    Would you recommed MealVault
-                    to a friend?
-                </label>
-     
-                <!-- Input Type Radio Button -->
-                <label for="recommed-1">
-                    <input type="radio"
-                           id="recommed-1"
-                           name="recommed">Yes</input>
-                </label>
-                <label for="recommed-2">
-                    <input type="radio"
-                           id="recommed-2"
-                           name="recommed">No</input>
-                </label>
-                <label for="recommed-3">
-                    <input type="radio"
-                           id="recommed-3"
-                           name="recommed">Maybe</input>
-                </label>
-            </div>
-      
-
-              
-        
-              <div class="form-control">
-                  <label for="comment">
-                      Any comments or suggestions
-                  </label>
-       
-                  <!-- multi-line text input control -->
-                  <textarea name="comment" id="comment"
-                      placeholder="Enter your comment here">
-                  </textarea>
-              </div>
-        
-              <!-- Multi-line Text Input Control -->
-              <button id="buttonsurvey" type="submit" value="submit">
-                  Submit
-              </button>
-          </form>
 
       
 
