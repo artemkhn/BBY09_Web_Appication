@@ -16,18 +16,18 @@ function writeReview() {
                 .then(userDoc => {
                     // Start a new collection and add all data in it.
                     db.collection("mygems").add({
-                        user: userID,
-                        name: name,
-                        city: city,
-                        price: price,
-                        description: Description,
-                        patio: patio,
-                        reservation: reservation
-                    })
-                    .then(function(){
+                            user: userID,
+                            name: name,
+                            city: city,
+                            price: price,
+                            description: Description,
+                            patio: patio,
+                            reservation: reservation
+                        })
+                        .then(function () {
 
-                        window.location.href = "index.html";
-                    });
+                            window.location.href = "index.html";
+                        });
                 })
         } else {
             // No user is signed in.
@@ -36,5 +36,6 @@ function writeReview() {
     });
 
 }
+
 
 
