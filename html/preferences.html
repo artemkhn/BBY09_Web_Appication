@@ -18,8 +18,9 @@
     <!-- Firebase 8 Library related JS CDN go here-->
 
     <!-- Other libraries go here -->
-    <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <link href="/styles/style.css" rel="stylesheet" type="text/css">
     <link href="/images/favicon.ico" rel="icon" type="image/x-icon"/>
+    <link href="/styles/preferences.css" rel="stylesheet" type="text/css">
     <!-- Link to styles of your own -->
     <!-- <link type="text/css" href="./styles/style.css"> -->
 
@@ -28,7 +29,7 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container-fluid">
-      <img id="logoimg" src="./images/MealVault.png" alt="">
+      <img id="logoimg" src="/images/MealVault.png" alt="">
       <a class="navbar-brand" href="index.html">MealVault</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -47,7 +48,6 @@
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li><a class="dropdown-item" href="profile.html">My Profile</a></li>
-              <li><a class="dropdown-item" href="rewards.html">Rewards</a></li>
               <li><a class="dropdown-item" href="favorites.html">Favorites</a></li>
               <li><a class="dropdown-item" href="aboutus.html">About Us</a></li>
               <li><hr class="dropdown-divider"></li>
@@ -65,54 +65,95 @@
       </div>
     </div>
   </nav>
-  
-  <br>
-  <h1 id="faqtitle">Frequently Asked Questions</h1>
-  <br>
-  <table class="table">
-    <thead class="thead-dark">
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Last Updated</th>
-        <th scope="col">Question</th>
-        <th scope="col">Answer</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td class="update">Feburary 24th, 2022</td>
-        <td>How can i apply preferences to my options?</td>
-        <td>Make sure you are <b>logged-in</b>. Locate to the <b><i>"browse"</i></b> page in the naviation bar <b>></b> Under the search bar, click on the <b>filter</b> icon <b>.</b> select any boxes that fit your personal preferences<b>></b> click <b><i>"Apply"</i></b>.</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td class="update">Feburary 24th, 2022</td>
-        <td>Where can i contact customer support?</td>
-        <td>Please go to the Customer Support Page <b>></b> <b><a id="cutomersup" href="cussupport.html">Customer Support</a></b>.</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td class="update">Feburary 24th, 2022</td>
-        <td>How can i create a mini-blog?</td>
-        <td>Make sure you are <b>logged-in</b>. Locate the <b><i>"Post"</i></b> page in the navigaton bar <b>></b> Insert a picture, title and description <b>></b> Click the <b><i>"post"</i></b> button at the bottom.</td>
-      </tr>
-      <tr>
-        <th scope="row">4</th>
-        <td class="update">March, 10th, 2022</td>
-        <td>How can i collect reward points?</td>
-        <td>Make sure you are <b>logged-in</b>. You can aquire points by signing up for our <b>newsletter</b>, writing <b>reviews</b> and <b>sharing posts</b>.</td>
-      </tr>
-      <th scope="row">5</th>
-        <td class="update">March, 10th, 2022</td>
-        <td>How can i make a mini-blog?</td>
-        <td>Make sure you are <b>logged-in</b>. <b>Click</b> the <i><b>plus</b></i> button on the home page <b>></b><b> Fill</b> out all the aspects of the form <b>></b><b> Click</b><i><b> submit</b></i>.</td>
-      </tr>
-    </tbody>
-  </table>
 
-  <h3 id="addquestions">Any additional questions, please contact us at <a class="customersup" href="cussupport.html">Customer Support</a>.</h3>
+  <div class="px-4pref py-5 my-5 text-center">
+    <br>
+    <!-- <img  src="" alt="" width="125px" height="100px"> -->
+    <h1 class="display-5 fw-bold">Food Preferences</h1>
+    <div class="col-lg-6 mx-auto">
+      <br>
+      <p class="lead mb-4">Apply any filters down below, to perfectly match your desired food options</p>
+      <br>
+      <br>
+      
+
+      <form id="pref">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Rating</button>
+        <ul class="dropdown-menu">
+          <li> &nbsp; <input type="checkbox"> &nbsp; 1 Star</li>
+          <li> &nbsp; <input type="checkbox"> &nbsp; 2 Stars</li>
+          <li> &nbsp; <input type="checkbox"> &nbsp; 3 Stars</li>
+          <li> &nbsp; <input type="checkbox"> &nbsp; 4 Stars</li>
+          <li> &nbsp; <input type="checkbox"> &nbsp; 5 Stars</li>
+          <li><hr class="dropdown-divider"></li>
+        </ul>
+    
+        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Price</button>
+        <ul class="dropdown-menu">
+          <li> &nbsp; <input type="checkbox"> &nbsp; Under $10</li>
+          <li> &nbsp; <input type="checkbox"> &nbsp; $10 - $20</li>
+          <li> &nbsp; <input type="checkbox"> &nbsp; $20 - $30</li>
+          <li> &nbsp; <input type="checkbox"> &nbsp; $40 - $50</li>
+          <li> &nbsp; <input type="checkbox"> &nbsp; Above $50</li>
+          <li><hr class="dropdown-divider"></li>
+        </ul>
+    
+       
+    
+        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Dietary Preferences</button>
+        <ul class="dropdown-menu">
+          <li> &nbsp; <input type="checkbox"> &nbsp; Vegetarian</li>
+          <li> &nbsp; <input type="checkbox"> &nbsp; Vegan</li>
+          <li> &nbsp; <input type="checkbox"> &nbsp; Lactose-Free</li>
+          <li> &nbsp; <input type="checkbox"> &nbsp; Pescatarian</li>
+          <li> &nbsp; <input type="checkbox"> &nbsp; Gluten-Free</li>
+          <li> &nbsp; <input type="checkbox"> &nbsp; Kosher</li>
+          <li> &nbsp; <input type="checkbox"> &nbsp; Halal</li>
+          <li> &nbsp; <input type="checkbox"> &nbsp; Keto</li>
+          <li> &nbsp; <input type="checkbox"> &nbsp; Peanut-Free</li>
+          <li><hr class="dropdown-divider"></li>
+        </ul>
+    
+        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Categories</button>
+        <ul class="dropdown-menu">
+          <li> &nbsp; <input type="checkbox"> &nbsp; Fast Food</li>
+          <li> &nbsp; <input type="checkbox"> &nbsp; Dine-In</li>
+          <li> &nbsp; <input type="checkbox"> &nbsp; Western</li>
+          <li> &nbsp; <input type="checkbox"> &nbsp; Southern</li>
+          <li> &nbsp; <input type="checkbox"> &nbsp; Indian</li>
+          <li> &nbsp; <input type="checkbox"> &nbsp; Italian</li>
+          <li> &nbsp; <input type="checkbox"> &nbsp; Asian</li>
+          <li> &nbsp; <input type="checkbox"> &nbsp; Persian</li>
+          <li><hr class="dropdown-divider"></li>
+          
+        </ul>
+    
+    
+     </form>
+     <br>
+     <br>
+     <br>
+     <form>
+      <button id="applybutton" type="button" onclick="location.href='index.html'">Apply</button>
+      <button id="resetbutton" type="button" onclick="location.href='preferences.html'">Reset</button>
+     </form>
+     <br>
+     <br>
+     <br>
+     <br>
+     
+     
+      
+      
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        <!-- <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Primary button</button> -->
+        <!-- <button type="button" class="btn btn-outline-secondary btn-lg px-4">Secondary</button> -->
+      
+      </div>
+    </div>
+  </div>
   
+
   
   
 
@@ -137,7 +178,10 @@
       </svg>
 
 
- 
+      
+
+
+
 
   <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
     <div class="col-md-4 d-flex align-items-center">

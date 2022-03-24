@@ -8,10 +8,9 @@ function searchVancouver() {
         querySnapshot.forEach((doc) => {
             // doc.data() is never undefined for query doc snapshots
             var name = doc.data().name; // get value of the "name" key
-                var description = doc.data().description; // get value of the "details" key
+                var description = doc.data().description; // get value of the "description" key
                 var gemID = doc.data().id; //gets the unique ID field
                 var likes = doc.data().likes;
-                var newcard = cardTemplate.content.cloneNode(true);
 
                 //update title and text and image
                 let testGemCard = cardTemplate.content.cloneNode(true);
@@ -20,15 +19,9 @@ function searchVancouver() {
                 testGemCard.querySelector('.likes-slot').innerHTML = likes;
                 testGemCard.querySelector('a').onclick = () => setHikeData(gemID);
                 testGemCard.querySelector('i').onclick = () => addLikes(gemID);
-                testGemCard.querySelector('img').src = `./images/${gemID}.jpg`;
+                testGemCard.querySelector('img').src = `/images/${gemID}.jpg`;
 
-                //give unique ids to all elements for future use
-                // newcard.querySelector('.card-title').setAttribute("id", "ctitle" + i);
-                // newcard.querySelector('.card-text').setAttribute("id", "ctext" + i);
-                // newcard.querySelector('.card-image').setAttribute("id", "cimage" + i);
-
-                //attach to gallery
-                GemCardGroup.appendChild(testGemCard);
+                gemCardGroup.appendChild(testGemCard);
         });
     })
     .catch((error) => {
@@ -47,7 +40,6 @@ function searchBurnaby() {
                 var description = doc.data().description; // get value of the "details" key
                 var gemID = doc.data().id; //gets the unique ID field
                 var likes = doc.data().likes;
-                var newcard = cardTemplate.content.cloneNode(true);
 
                 //update title and text and image
                 let testGemCard = cardTemplate.content.cloneNode(true);
@@ -56,7 +48,7 @@ function searchBurnaby() {
                 testGemCard.querySelector('.likes-slot').innerHTML = likes;
                 testGemCard.querySelector('a').onclick = () => setHikeData(gemID);
                 testGemCard.querySelector('i').onclick = () => addLikes(gemID);
-                testGemCard.querySelector('img').src = `./images/${gemID}.jpg`;
+                testGemCard.querySelector('img').src = `/images/${gemID}.jpg`;
 
                 //give unique ids to all elements for future use
                 // newcard.querySelector('.card-title').setAttribute("id", "ctitle" + i);
@@ -64,7 +56,7 @@ function searchBurnaby() {
                 // newcard.querySelector('.card-image').setAttribute("id", "cimage" + i);
 
                 //attach to gallery
-                GemCardGroup.appendChild(testGemCard);
+                gemCardGroup.appendChild(testGemCard);
         });
     })
     .catch((error) => {
@@ -83,7 +75,6 @@ function searchLangley() {
                 var description = doc.data().description; // get value of the "details" key
                 var gemID = doc.data().id; //gets the unique ID field
                 var likes = doc.data().likes;
-                var newcard = cardTemplate.content.cloneNode(true);
 
                 //update title and text and image
                 let testGemCard = cardTemplate.content.cloneNode(true);
@@ -92,7 +83,7 @@ function searchLangley() {
                 testGemCard.querySelector('.likes-slot').innerHTML = likes;
                 testGemCard.querySelector('a').onclick = () => setHikeData(gemID);
                 testGemCard.querySelector('i').onclick = () => addLikes(gemID);
-                testGemCard.querySelector('img').src = `./images/${gemID}.jpg`;
+                testGemCard.querySelector('img').src = `/images/${gemID}.jpg`;
 
                 //give unique ids to all elements for future use
                 // newcard.querySelector('.card-title').setAttribute("id", "ctitle" + i);
@@ -100,7 +91,7 @@ function searchLangley() {
                 // newcard.querySelector('.card-image').setAttribute("id", "cimage" + i);
 
                 //attach to gallery
-                GemCardGroup.appendChild(testGemCard);
+                gemCardGroup.appendChild(testGemCard);
         });
     })
     .catch((error) => {
@@ -119,7 +110,6 @@ function searchSurrey() {
                 var description = doc.data().description; // get value of the "details" key
                 var gemID = doc.data().id; //gets the unique ID field
                 var likes = doc.data().likes;
-                var newcard = cardTemplate.content.cloneNode(true);
 
                 //update title and text and image
                 let testGemCard = cardTemplate.content.cloneNode(true);
@@ -128,7 +118,7 @@ function searchSurrey() {
                 testGemCard.querySelector('.likes-slot').innerHTML = likes;
                 testGemCard.querySelector('a').onclick = () => setHikeData(gemID);
                 testGemCard.querySelector('i').onclick = () => addLikes(gemID);
-                testGemCard.querySelector('img').src = `./images/${gemID}.jpg`;
+                testGemCard.querySelector('img').src = `/images/${gemID}.jpg`;
 
                 //give unique ids to all elements for future use
                 // newcard.querySelector('.card-title').setAttribute("id", "ctitle" + i);
@@ -136,7 +126,7 @@ function searchSurrey() {
                 // newcard.querySelector('.card-image').setAttribute("id", "cimage" + i);
 
                 //attach to gallery
-                GemCardGroup.appendChild(testGemCard);
+                gemCardGroup.appendChild(testGemCard);
         });
     })
     .catch((error) => {
@@ -155,7 +145,6 @@ function search$() {
                 var description = doc.data().description; // get value of the "details" key
                 var gemID = doc.data().id; //gets the unique ID field
                 var likes = doc.data().likes;
-                var newcard = cardTemplate.content.cloneNode(true);
 
                 //update title and text and image
                 let testGemCard = cardTemplate.content.cloneNode(true);
@@ -164,7 +153,7 @@ function search$() {
                 testGemCard.querySelector('.likes-slot').innerHTML = likes;
                 testGemCard.querySelector('a').onclick = () => setHikeData(gemID);
                 testGemCard.querySelector('i').onclick = () => addLikes(gemID);
-                testGemCard.querySelector('img').src = `./images/${gemID}.jpg`;
+                testGemCard.querySelector('img').src = `/images/${gemID}.jpg`;
 
                 //give unique ids to all elements for future use
                 // newcard.querySelector('.card-title').setAttribute("id", "ctitle" + i);
@@ -172,7 +161,7 @@ function search$() {
                 // newcard.querySelector('.card-image').setAttribute("id", "cimage" + i);
 
                 //attach to gallery
-                GemCardGroup.appendChild(testGemCard);
+                gemCardGroup.appendChild(testGemCard);
         });
     })
     .catch((error) => {
@@ -191,7 +180,6 @@ function search$$() {
                 var description = doc.data().description; // get value of the "details" key
                 var gemID = doc.data().id; //gets the unique ID field
                 var likes = doc.data().likes;
-                var newcard = cardTemplate.content.cloneNode(true);
 
                 //update title and text and image
                 let testGemCard = cardTemplate.content.cloneNode(true);
@@ -200,7 +188,7 @@ function search$$() {
                 testGemCard.querySelector('.likes-slot').innerHTML = likes;
                 testGemCard.querySelector('a').onclick = () => setHikeData(gemID);
                 testGemCard.querySelector('i').onclick = () => addLikes(gemID);
-                testGemCard.querySelector('img').src = `./images/${gemID}.jpg`;
+                testGemCard.querySelector('img').src = `/images/${gemID}.jpg`;
 
                 //give unique ids to all elements for future use
                 // newcard.querySelector('.card-title').setAttribute("id", "ctitle" + i);
@@ -208,7 +196,7 @@ function search$$() {
                 // newcard.querySelector('.card-image').setAttribute("id", "cimage" + i);
 
                 //attach to gallery
-                GemCardGroup.appendChild(testGemCard);
+                gemCardGroup.appendChild(testGemCard);
         });
     })
     .catch((error) => {
@@ -227,7 +215,6 @@ function search$$$() {
                 var description = doc.data().description; // get value of the "details" key
                 var gemID = doc.data().id; //gets the unique ID field
                 var likes = doc.data().likes;
-                var newcard = cardTemplate.content.cloneNode(true);
 
                 //update title and text and image
                 let testGemCard = cardTemplate.content.cloneNode(true);
@@ -236,7 +223,7 @@ function search$$$() {
                 testGemCard.querySelector('.likes-slot').innerHTML = likes;
                 testGemCard.querySelector('a').onclick = () => setHikeData(gemID);
                 testGemCard.querySelector('i').onclick = () => addLikes(gemID);
-                testGemCard.querySelector('img').src = `./images/${gemID}.jpg`;
+                testGemCard.querySelector('img').src = `/images/${gemID}.jpg`;
 
                 //give unique ids to all elements for future use
                 // newcard.querySelector('.card-title').setAttribute("id", "ctitle" + i);
@@ -244,7 +231,7 @@ function search$$$() {
                 // newcard.querySelector('.card-image').setAttribute("id", "cimage" + i);
 
                 //attach to gallery
-                GemCardGroup.appendChild(testGemCard);
+                gemCardGroup.appendChild(testGemCard);
         });
     })
     .catch((error) => {
@@ -263,7 +250,6 @@ function search$$$$() {
                 var description = doc.data().description; // get value of the "details" key
                 var gemID = doc.data().id; //gets the unique ID field
                 var likes = doc.data().likes;
-                var newcard = cardTemplate.content.cloneNode(true);
 
                 //update title and text and image
                 let testGemCard = cardTemplate.content.cloneNode(true);
@@ -272,7 +258,7 @@ function search$$$$() {
                 testGemCard.querySelector('.likes-slot').innerHTML = likes;
                 testGemCard.querySelector('a').onclick = () => setHikeData(gemID);
                 testGemCard.querySelector('i').onclick = () => addLikes(gemID);
-                testGemCard.querySelector('img').src = `./images/${gemID}.jpg`;
+                testGemCard.querySelector('img').src = `/images/${gemID}.jpg`;
 
                 //give unique ids to all elements for future use
                 // newcard.querySelector('.card-title').setAttribute("id", "ctitle" + i);
@@ -280,7 +266,7 @@ function search$$$$() {
                 // newcard.querySelector('.card-image').setAttribute("id", "cimage" + i);
 
                 //attach to gallery
-                GemCardGroup.appendChild(testGemCard);
+                gemCardGroup.appendChild(testGemCard);
         });
     })
     .catch((error) => {

@@ -19,6 +19,7 @@
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
   </script>
 
+
   <!-- Firebase 8 Library related CSS CDN go here -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
@@ -28,13 +29,13 @@
   <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
   <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
   <!-- Firebase 8 Library related JS CDN go here-->
-
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
   <!-- Other libraries go here -->
-  <link href="styles/style.css" rel="stylesheet" type="text/css">
+  <link href="/styles/style.css" rel="stylesheet" type="text/css">
   <link href="/images/favicon.ico" rel="icon" type="image/x-icon" />
   <!-- Link to styles of your own -->
-  <link rel="stylesheet" href="./styles/index.css">
-  <link rel="stylesheet" href="./styles/addcard.css">
+  <link rel="stylesheet" href="/styles/index.css">
+  <link rel="stylesheet" href="/styles/addcard.css">
   <!-- <link type="text/css" href="./styles/style.css"> -->
 
 </head>
@@ -42,7 +43,7 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container-fluid">
-      <img class="logoimg" src="./images/MealVault.png" alt="">
+      <img class="logoimg" src="/images/MealVault.png" alt="">
       <a class="navbar-brand" href="index.html">MealVault</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -82,7 +83,7 @@
   </nav>
 
 
- 
+
   </div>
   <br>
   <br>
@@ -95,6 +96,7 @@
     <br>
     <br>
     <div class="container">
+      <h1>Review for <span id="gName"></span></h1>
       <form>
         <div class="form-group">
           <label for="exampleFormControlInput1">Name of Restaurant</label>
@@ -123,9 +125,9 @@
             <textarea class="form-control" id="description" rows="3"></textarea>
           </div>
           <br>
-          <!--Flooded--> 
+          <!--Flooded-->
           <label>Patio<span style="display:inline-block; width: 26pt;"></span></label>
-  
+
           <div class="form-check form-check-inline">
             <input class="form-check-input" type="radio" name="patio" value="Yes">
             <label>Yes</label>
@@ -141,7 +143,7 @@
           <br>
           <!--Scramble-->
           <label>Resrvation needed <span style="display:inline-block; width: 20pt;"></span></label>
-  
+
           <div class="form-check form-check-inline">
             <input class="form-check-input" type="radio" name="reservation" value="Yes">
             <label>Yes</label>
@@ -154,7 +156,7 @@
             <input class="form-check-input" type="radio" name="reservation" value="unSure" checked="">
             <label>Not sure</label>
           </div>
-  
+
           <br>
           <div class="d-flex justify-content-end">
             <button type="button" class="btn btn-lg btn-primary pull-right" onclick="writeReview()">Submit</button>
@@ -164,7 +166,7 @@
     </div>
     <br>
 
-    
+
 
 
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -213,10 +215,10 @@
       </ul>
     </footer>
 
-    <script src="./scripts/firebaseAPI.js"></script>
-    <script src="./scripts/authentication.js"></script>
-    <script src="./scripts/addcards.js"></script>
-    <script src="./scripts/main.js"></script>
+    <script src="/scripts/firebaseAPI.js"></script>
+    <script src="/scripts/authentication.js"></script>
+    <script src="/scripts/addcards.js"></script>
+    <script src="/scripts/main.js"></script>
 </body>
 
 </html>

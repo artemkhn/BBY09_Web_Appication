@@ -21,9 +21,9 @@
   <!-- Firebase 8 Library related JS CDN go here-->
 
   <!-- Other libraries go here -->
-  <link href="styles/style.css" rel="stylesheet" type="text/css">
+  <link href="/styles/style.css" rel="stylesheet" type="text/css">
   <link href="/images/favicon.ico" rel="icon" type="image/x-icon" />
-  <link href="styles/rewards.css" rel="stylesheet" type="text/css">
+  <link href="/styles/post.css" rel="stylesheet" type="text/css">
   <!-- Link to styles of your own -->
   <!-- <link type="text/css" href="./styles/style.css"> -->
 
@@ -32,8 +32,8 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container-fluid">
-      <img id="logoimg" src="./images/MealVault.png" alt="">
-      <a class="navbar-brand" href="index.html"><b>MealVault</b></a>
+      <img id="logoimg" src="/images/MealVault.png" alt="">
+      <a class="navbar-brand" href="index.html">MealVault</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -41,10 +41,10 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="aboutus.html">About Us</a>
+            <a class="nav-link active" aria-current="page" href="post.html">Post</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="FAQ.html">FAQ</a>
+            <a class="nav-link" href="browse.html">Browse</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
@@ -53,212 +53,113 @@
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li><a class="dropdown-item" href="profile.html">My Profile</a></li>
-              <li><a class="dropdown-item" href="rewards.html">Rewards</a></li>
-              <li><a class="dropdown-item" href="survey.html">Survey</a></li>
-              <li><a class="dropdown-item" href="contactus.html">Contact Us</a></li>
+              <li><a class="dropdown-item" href="favorites.html">Favorites</a></li>
+              <li><a class="dropdown-item" href="aboutus.html">About Us</a></li>
               <li>
                 <hr class="dropdown-divider">
               </li>
-              <li><a class="dropdown-item" href="settings.html">Settings</a></li>
+              <li><a class="dropdown-item" href="FAQ.html">FAQ</a></li>
             </ul>
           </li>
           <li class="nav-item">
             <a class="nav-link disabled" href="#" tabindex="-1"></a>
           </li>
         </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
       </div>
     </div>
   </nav>
 
-  <main class="container py-5">
-    <h1>Rewards</h1>
-    <div id="rewards" class="row view-group">
-      <div class="reward col-xs-3 col-lg-3 grid-group-item">
-        <div class="card">
-          <div class="img">
-            <img src="images/gift.png" alt="">
-          </div>
-          <div class="card-content">
-            <h4>
-              20% off</h4>
-            <p>
-              This coupon can only be used once and cannot be combined with any additional promotions.</p>
-            <div class="row">
-              <div class="col-xs-12 col-md-6">
-                <p>
-                  3000pts</p>
-              </div>
-              <div class="col-xs-12 col-md-6">
-                <a class="btn btn-success" href="rewardssuccess.html">Redeem</a>
-              </div>
-            </div>
-          </div>
-        </div>
+  <form class="needs-validation" novalidate>
+    <br>
+    <h1>Create a Post</h1>
+    <br>
+
+    <div class="container text-center py-3">
+      <input type="file" /> //accept file input
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="exampleFormControlFile1"></label>
+        <input type="file" class="form-control-file" id="exampleFormControlFile1" required>
       </div>
       <br>
-      <div class="reward col-xs-3 col-lg-3 grid-group-item">
-        <div class="card">
-          <div class="img">
-            <img src="images/gift.png" alt="">
-          </div>
-          <div class="card-content">
-            <h4>
-              30% off</h4>
-            <p>
-              This coupon can only be used once and cannot be combined with any additional promotions.</p>
-            <div class="row">
-              <div class="col-xs-12 col-md-6">
-                <p>
-                  3000pts</p>
-              </div>
-              <div class="col-xs-12 col-md-6">
-                <a class="btn btn-success" href="rewardssuccess.html">Redeem</a>
-              </div>
-            </div>
-          </div>
+      <div class="col-md-4 mb-3">
+        <label for="validationCustom01">&nbsp; Title</label>
+        <input type="text" class="form-control" id="validationCustom01" placeholder="Title..." required>
+        <div class="valid-feedback">
+          Looks good!
         </div>
       </div>
-      <br>
-      <div class="reward col-xs-3 col-lg-3 grid-group-item">
-        <div class="card">
-          <div class="img">
-            <img src="images/gift.png" alt="">
-          </div>
-          <div class="card-content">
-            <h4>
-              40% off</h4>
-            <p>
-              This coupon can only be used once and cannot be combined with any additional promotions.</p>
-            <div class="row">
-              <div class="col-xs-12 col-md-6">
-                <p>
-                  3000pts</p>
-              </div>
-              <div class="col-xs-12 col-md-6">
-                <a class="btn btn-success" href="rewardssuccess.html">Redeem</a>
-              </div>
-            </div>
-          </div>
+      <div class="col-md-4 mb-3">
+        <label for="validationCustom02">&nbsp; Description</label>
+        <input type="text" class="form-control" id="validationCustom02" placeholder="Description..." required>
+        <div class="valid-feedback">
+          Looks good!
         </div>
       </div>
-      <br>
-      <div class="reward col-xs-3 col-lg-3 grid-group-item">
-        <div class="card">
-          <div class="img">
-            <img src="images/gift.png" alt="">
+      <div class="col-md-4 mb-3">
+        <label for="validationCustomUsername">&nbsp; Tags</label>
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroupPrepend">@</span>
           </div>
-          <div class="card-content">
-            <h4>
-              20% off</h4>
-            <p>
-              This coupon can only be used once and cannot be combined with any additional promotions.</p>
-            <div class="row">
-              <div class="col-xs-12 col-md-6">
-                <p>
-                  4000pts</p>
-              </div>
-              <div class="col-xs-12 col-md-6">
-                <a class="btn btn-success" href="rewardssuccess.html">Redeem</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <br>
-      <div class="reward col-xs-3 col-lg-3 grid-group-item">
-        <div class="card">
-          <div class="img">
-            <img src="images/gift.png" alt="">
-          </div>
-          <div class="card-content">
-            <h4>
-              25% off</h4>
-            <p>
-              This coupon can only be used once and cannot be combined with any additional promotions.</p>
-            <div class="row">
-              <div class="col-xs-12 col-md-6">
-                <p>
-                  2000pts</p>
-              </div>
-              <div class="col-xs-12 col-md-6">
-                <a class="btn btn-success" href="rewardssuccess.html">Redeem</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <br>
-      <div class="reward col-xs-3 col-lg-3 grid-group-item">
-        <div class="card">
-          <div class="img">
-            <img src="images/gift.png" alt="">
-          </div>
-          <div class="card-content">
-            <h4>
-              30% off</h4>
-            <p>
-              This coupon can only be used once and cannot be combined with any additional promotions.</p>
-            <div class="row">
-              <div class="col-xs-12 col-md-6">
-                <p>
-                  1000pts</p>
-              </div>
-              <div class="col-xs-12 col-md-6">
-                <a class="btn btn-success" href="rewardssuccess.html">Redeem</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="reward col-xs-3 col-lg-3 grid-group-item">
-        <div class="card">
-          <div class="img">
-            <img src="images/gift.png" alt="">
-          </div>
-          <div class="card-content">
-            <h4>
-              30% off</h4>
-            <p>
-              This coupon can only be used once and cannot be combined with any additional promotions.</p>
-            <div class="row">
-              <div class="col-xs-12 col-md-6">
-                <p>
-                  1000pts</p>
-              </div>
-              <div class="col-xs-12 col-md-6">
-                <a class="btn btn-success" href="rewardssuccess.html">Redeem</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="reward col-xs-3 col-lg-3 grid-group-item">
-        <div class="card">
-          <div class="img">
-            <img src="images/gift.png" alt="">
-          </div>
-          <div class="card-content">
-            <h4>
-              30% off</h4>
-            <p>
-              This coupon can only be used once and cannot be combined with any additional promotions.</p>
-            <div class="row">
-              <div class="col-xs-12 col-md-6">
-                <p>
-                  1000pts</p>
-              </div>
-              <div class="col-xs-12 col-md-6">
-                <a class="btn btn-success" href="rewardssuccess.html">Redeem</a>
-              </div>
-            </div>
+          <input type="text" class="form-control" id="validationCustomUsername" placeholder="Users/Restaurant"
+            aria-describedby="inputGroupPrepend" required>
+          <div class="invalid-feedback">
+            Please tag a restaurant.
           </div>
         </div>
       </div>
     </div>
+    <div class="form-row">
+      <div class="col-md-4 mb-3">
+        <label for="validationCustom03">&nbsp; Location</label>
+        <input type="text" class="form-control" id="validationCustom03" placeholder="Adress..." required>
+        <div class="invalid-feedback">
+          Please provide a valid location.
+        </div>
+      </div>
+    </div>
 
+    <div class="form-group">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+        <label class="form-check-label" for="invalidCheck">
+          <a href="#">Agree to terms and conditions</a>
+        </label>
+        <div class="invalid-feedback">
+          You must agree before submitting.
+        </div>
+      </div>
+    </div>
+    <br>
+    <button class="btn btn-primary" type="submit">Submit Post</button>
+  </form>
 
-
-  </main>
+  <script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function () {
+      'use strict';
+      window.addEventListener('load', function () {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function (form) {
+          form.addEventListener('submit', function (event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+      }, false);
+    })();
+  </script>
 
 
 
@@ -285,6 +186,11 @@
         d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.828-1.165c-.315 0-.602.124-.812.325-.801-.573-1.9-.945-3.121-.993l.534-2.501 1.738.372a.83.83 0 1 0 .83-.869.83.83 0 0 0-.744.468l-1.938-.41a.203.203 0 0 0-.153.028.186.186 0 0 0-.086.134l-.592 2.788c-1.24.038-2.358.41-3.17.992-.21-.2-.496-.324-.81-.324a1.163 1.163 0 0 0-.478 2.224c-.02.115-.029.23-.029.353 0 1.795 2.091 3.256 4.669 3.256 2.577 0 4.668-1.451 4.668-3.256 0-.114-.01-.238-.029-.353.401-.181.688-.592.688-1.069 0-.65-.525-1.165-1.165-1.165z" />
     </symbol>
   </svg>
+
+
+
+
+
 
 
   <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
