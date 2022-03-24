@@ -80,46 +80,43 @@
     </div>
   </nav>
 
-  <div>
-    <br>
-    <br>
+  <div class="container">
     <h1 id="userview">MyProfile</h1>
-    <div id="profilediv">
-      <div class="container text-center py-3">
-        <img id="mypic-goes-here" src="images/blah.jpg" width=50 height=50 />
-        <input type="file" accept="image/*" id="gempicfile"/>
-      </div>
+    <div class="container text-center py-3">
+      <img id="mypic-goes-here" src="images/blah.jpg" width=50 height=50 />
+      <input type="file" accept="image/*" id="gempicfile"/>
+      <br>
+      <br>
+      <br>
       <img class="rounded mx-auto d-block" id="image-goes-here" src=""  width="300px"/>
-       <br>
-       <br>
-       <h3 id="usernameprof">Name: <span class="name-goes-here"></span></h3>
-       <h3 id="usernameprof">Email: <span class="email-goes-here"></span></h3>
-       <br>
-       <div class="row">
-        <div class="w3-row">
-          <div class="w3-col s4" style="height:200px;padding:20px;color:#000;">
-          <div class="w3-hide-small">
-          <h2>Posts</h2>
-          <p>0</p>
-          </div></div>
-          <div class="w3-col s4" style="height:200px;padding:20px;color:#000;">
-          <div class="w3-hide-small">
-          <h2>Likes</h2>
-          <p>0</p>
-          </div></div>
-          <div class="w3-col s4" style="height:200px;padding:20px;color:#000;">
-          <div class="w3-hide-small">
-          <h2>Followers</h2>
-          <p>0</p>
-          </div>
-      </div>
-       <br>
     </div>
-    <br>
-    
-    <br>
-  </div>
-  
+    <form>
+        <fieldset class="mb-3" id="profilefeilds" disabled>
+            <div class="form-group">
+                <label>Name</label>
+                <input type="text" id="nameInput" class="form-control" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+              <label>Username</label>
+              <input type="text" id="usernameInput" class="form-control" placeholder="Enter your username">
+            </div>
+            <div class="form-group">
+                <label>Email</label>
+                <input type="text" id="emailInput" class="form-control" placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+                <label>Phone</label>
+                <input type="text" id="phoneInput" class="form-control" placeholder="Enter your phone number">
+            </div>
+        </fieldset>
+        <div class="d-flex justify-content-end mt-5">
+            <button type="button" class="btn btn-secondary" onclick="editUserProfile()">Edit</button>
+            <span style="width: 10px"></span>
+            <button type="button" class="btn btn-info"onclick="saveUserProfile()">Save</button>
+        </div>
+    </form>
+</div>
+
   <div class="container">
     <br>
     <br>
