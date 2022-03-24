@@ -24,7 +24,7 @@ color: lightblue;
 }
 
 .px-4start{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.658), rgba(0, 0, 0, 0.452)), url(/images/restraunt.png);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.658), rgba(0, 0, 0, 0.452)), url(../images/restraunt.png);
   color: white;
 }
 .navbar-brand{

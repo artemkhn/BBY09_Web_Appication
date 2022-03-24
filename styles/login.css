@@ -1,5 +1,5 @@
 #backpic{
-    background-image: url(/images/logpic.jpg);
+    background-image: url(../images/logpic.jpg);
     width: 100%;
     height:100%;
     background-size: cover; /* or contain depending on what you want */

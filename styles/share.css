@@ -71,7 +71,7 @@
       background-image:  linear-gradient(
         rgba(0, 0, 0, 0.5),
         rgba(0, 0, 0, 0.5)
-      ), url(/images/res1.jpeg);
+      ), url(../images/res1.jpeg);
       background-size: 600px;
 color: white;
   }
@@ -81,7 +81,7 @@ color: white;
     background-image:  linear-gradient(
         rgba(0, 0, 0, 0.5),
         rgba(0, 0, 0, 0.5)
-      ), url(/images/res2.jpeg);
+      ), url(../images/res2.jpeg);
     background-size: 470px;
 color: white;
       
@@ -91,7 +91,7 @@ color: white;
       background-image:  linear-gradient(
         rgba(0, 0, 0, 0.5),
         rgba(0, 0, 0, 0.5)
-      ), url(/images/res3.jpeg);
+      ), url(../images/res3.jpeg);
       background-size: 470px;
 color: white;
   }

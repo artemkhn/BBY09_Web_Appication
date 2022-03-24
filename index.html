@@ -27,14 +27,13 @@
   <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
   <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
   <!-- Firebase 8 Library related JS CDN go here-->
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+
 
   <!-- Other libraries go here -->
-  <link href="../styles/style.css" rel="stylesheet" type="text/css">
-  <link href="../images/favicon.ico" rel="icon" type="image/x-icon" />
+  <link href="styles/style.css" rel="stylesheet" type="text/css">
+  <link href="/images/favicon.ico" rel="icon" type="image/x-icon" />
   <!-- Link to styles of your own -->
-  <link rel="stylesheet" href="../styles/index.css">
-  <link rel="stylesheet" href="../styles/profile.css">
+  <link rel="stylesheet" href="./styles/index.css">
   <!-- <link type="text/css" href="./styles/style.css"> -->
 
 </head>
@@ -42,7 +41,7 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container-fluid">
-      <img class="logoimg" src="../images/MealVault.png" alt="">
+      <img class="logoimg" src="./images/MealVault.png" alt="">
       <a class="navbar-brand" href="index.html">MealVault</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -62,9 +61,11 @@
               Other
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="profile.html">My Profile</a></li>
               <li><a class="dropdown-item" href="rewards.html">Rewards</a></li>
               <li><a class="dropdown-item" href="favorites.html">Favorites</a></li>
               <li><a class="dropdown-item" href="aboutus.html">About Us</a></li>
+              <li><a class="dropdown-item" href="cussupport.html">Contact Us</a></li>
               <li>
                 <hr class="dropdown-divider">
               </li>
@@ -80,67 +81,88 @@
     </div>
   </nav>
 
-  <div>
+
+  <div class="px-4start py-5 my-5 text-center xx">
     <br>
     <br>
-    <h1 id="userview">MyProfile</h1>
-    <div id="profilediv">
-      <div class="container text-center py-3">
-        <img id="mypic-goes-here" src="images/blah.jpg" width=50 height=50 />
-        <input type="file" accept="image/*" id="gempicfile"/>
+    <!-- <img  src="./images/MealVault.png" alt="" width="125px" height="100px"> -->
+    <!-- <h1 class="display-5 fw-bold heading1">MealVault</h1> -->
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4 welcome">Welcome, <span class="name-goes-here"></span></p>
+      <br>
+      <!-- <form class="d-flex">
+        <a id="preferencesbutton" href="preferences.html"><img id="preferences" src="./images/preferences.png"
+            alt=""></a>
+        <input id="search" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <input class="form-control me-2" type="search" placeholder="Location (ex. Vancouver, BC)" aria-label="Search">
+        <button class="btn btn-outline-success" id="searchButton" type="submit">Search</button>
+      </form> -->
+      <br>
+      <h1>Filter By</h1>
+      <br>
+      <form class="d-flex">
+        <h2>City: </h2>
+        <div>
+          <button class="btn btn-outline-success filterbtn" type="button" onclick="searchVancouver()">Vancouver</button>
+          <button class="btn btn-outline-success filterbtn" type="button" onclick="searchBurnaby()">Burnaby</button>
+          <button class="btn btn-outline-success filterbtn" type="button" onclick="searchLangley()">Langley</button>
+          <button class="btn btn-outline-success filterbtn" type="button" onclick="searchSurrey()">Surrey</button>
+        </div>
+      </form>
+      <br />
+      <form class="d-flex">
+        <h2>Price: </h2>
+        <div>
+          <button class="btn btn-outline-success px-2 filterbtn" type="button" onclick="search$()">$</button>
+          <button class="btn btn-outline-success px-2 filterbtn" type="button" onclick="search$$()">$$</button>
+          <button class="btn btn-outline-success px-2 filterbtn" type="button" onclick="search$$$()">$$$</button>
+          <button class="btn btn-outline-success px-2 filterbtn" type="button" onclick="search$$$$()">$$$$</button>
+        </div>
+      </form>
+      <br>
+      <button class="btn btn-outline-success px-2" type="button">Clear</button>
+      <br>
+      <br>
+      <h1>Show All</h1>
+
+      <button class="btn btn-outline-success" type="button" onclick="displayCards()">Get Suggestions</button>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        <!-- <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Primary button</button> -->
+        <!-- <button type="button" class="btn btn-outline-secondary btn-lg px-4">Secondary</button> -->
+        <br>
+        <br>
+
+        <br>
+        <br>
+        <br>
       </div>
-      <img class="rounded mx-auto d-block" id="image-goes-here" src=""  width="300px"/>
-       <br>
-       <br>
-       <h3 id="usernameprof">Name: <span class="name-goes-here"></span></h3>
-       <h3 id="usernameprof">Email: <span class="email-goes-here"></span></h3>
-       <br>
-       <div class="row">
-        <div class="w3-row">
-          <div class="w3-col s4" style="height:200px;padding:20px;color:#000;">
-          <div class="w3-hide-small">
-          <h2>Posts</h2>
-          <p>0</p>
-          </div></div>
-          <div class="w3-col s4" style="height:200px;padding:20px;color:#000;">
-          <div class="w3-hide-small">
-          <h2>Likes</h2>
-          <p>0</p>
-          </div></div>
-          <div class="w3-col s4" style="height:200px;padding:20px;color:#000;">
-          <div class="w3-hide-small">
-          <h2>Followers</h2>
-          <p>0</p>
-          </div>
-      </div>
-       <br>
     </div>
-    <br>
-    
-    <br>
   </div>
-  
   <div class="container">
-    <br>
-    <br>
-    <br>
-    <br>
-    <h1 class="d-flex justify-content-center align-content-center">Your Hidden Gems</h1>
-    <p class="d-flex justify-content-center align-content-center"></p>
+    <h1 class="d-flex justify-content-center align-content-center">Hidden Gems</h1>
+    <p class="d-flex justify-content-center align-content-center">Suggested Gems. What are you waiting
+      for?</p>
+    <div class="d-flex flex-column align-items-center" id="addpost">
+      <a id="addapost" href="/addrestaurant.html"><img src="./images/addpost.png"></a>
+      <p>Add your gem</p>
+    </div>
     <!-- Here is container for cards  -->
     <div class="container">
-      <div id="mygems-go-here" class="row row-cols-auto justify-content-center">
+      <div id="GemCardGroup" class="row row-cols-auto justify-content-center">
         <template id="cardTemplate">
-          <div class="card m-3 align-self-center" style="width: 25rem;">
-            <img class="card-image card-img-top image-goes-here" src="..." alt="...">
+          <div class="card m-3" style="width: 25rem;">
+            <img class="card-image card-img-top" src="..." alt="..." width="100px" height="200px">
             <div class="card-body">
               <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+              <p class="card-length">Some quick example text to build on the card title and make up the bulk of the
                 card's content.</p>
-              <a class="btn btn-primary card-href">Get Details</a>
+              <a href="#" class="btn btn-primary" style="float: right">Read more</a>
+              <i onclick="addLikes(gemID)" style="float: left"><img src="./images/heart.png"></i>
+              <p class="likes-slot" style="float: left;">text here</p>
             </div>
           </div>
         </template>
+
       </div>
     </div>
   </div>
@@ -169,7 +191,6 @@
     </symbol>
   </svg>
 
-
   <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
     <div class="col-md-4 d-flex align-items-center">
       <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
@@ -192,11 +213,14 @@
     </ul>
   </footer>
 
-  <script src="../scripts/firebaseAPI.js"></script>
-  <script src="../scripts/profile.js"></script>
-  <script src="../scripts/authentication.js"></script>
-  <script src="../scripts/cards.js"></script>
-  <script src="../scripts/main.js"></script>
+
+
+
+  <script src="./scripts/firebaseAPI.js"></script>
+  <script src="./scripts/cards.js"></script>
+  <script src="./scripts/authentication.js"></script>
+  <script src="./scripts/main.js"></script>
+  <script src="./scripts/search.js"></script>
 </body>
 
 </html>
