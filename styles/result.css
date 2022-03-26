@@ -24,7 +24,7 @@ color: lightblue;
 }
 
 .px-4start{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url(/images/resultsearch.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url(../images/resultsearch.jpg);
   color: white;
   height: 300px;
 }

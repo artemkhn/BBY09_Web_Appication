@@ -65,7 +65,7 @@ body {
 
 
 .px-4start {
-  background-image: url(/images/hiddengem.png);
+  background-image: url(../images/hiddengem.png);
   color: white;
 }
 
@@ -121,4 +121,19 @@ h5 {
 
 .lead {
   font-size: 25px;
+}
+
+.px-4about{
+  background-image: url(../images/ftruck.png);
+  color: white;
+}
+
+#aboutustitle{
+  font-size: 80px;
+  text-shadow: 5px 5px 5px mediumpurple;
+  
+}
+
+#aboutdesc{
+  text-align: center;
 }
