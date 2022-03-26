@@ -30,10 +30,10 @@
 
 
   <!-- Other libraries go here -->
-  <link href="/styles/style.css" rel="stylesheet" type="text/css">
-  <link href="/images/favicon.ico" rel="icon" type="image/x-icon" />
+  <link href="../styles/style.css" rel="stylesheet" type="text/css">
+  <link href="../images/favicon.ico" rel="icon" type="image/x-icon" />
   <!-- Link to styles of your own -->
-  <link rel="stylesheet" href="/styles/index.css">
+  <link rel="stylesheet" href="../styles/index.css">
   <!-- <link type="text/css" href="./styles/style.css"> -->
 
 </head>
@@ -41,7 +41,7 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container-fluid">
-      <img class="logoimg" src="/images/MealVault.png" alt="">
+      <img class="logoimg" src="../images/MealVault.png" alt="">
       <a class="navbar-brand" href="index.html">MealVault</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -102,7 +102,7 @@
       <br>
       <br>
       <form class="d-flex">
-        <h2>City: </h2>
+        <h2 class="filter">City: </h2>
         <div>
           <button class="btn btn-outline-success filterbtn" type="button" onclick="searchVancouver()">Vancouver</button>
           <button class="btn btn-outline-success filterbtn" type="button" onclick="searchBurnaby()">Burnaby</button>
@@ -112,7 +112,7 @@
       </form>
       <br />
       <form class="d-flex">
-        <h2>Price: </h2>
+        <h2 class="filter">Price: </h2>
         <div>
           <button class="btn btn-outline-success px-2 filterbtn" type="button" onclick="search$()">$</button>
           <button class="btn btn-outline-success px-2 filterbtn" type="button" onclick="search$$()">$$</button>
@@ -143,25 +143,24 @@
   </div>
   <div class="container">
     <h1 class="d-flex justify-content-center align-content-center">Hidden Gems</h1>
-    <p class="d-flex justify-content-center align-content-center">Suggested Gems. What are you waiting
-      for?</p>
+    <p class="d-flex justify-content-center align-content-center">What are you waiting
+      for? Add your own!</p>
     <div class="d-flex flex-column align-items-center" id="addpost">
-      <a id="addapost" href="addrestaurant.html"><img src="/images/addpost.png"></a>
+      <a id="addapost" href="addrestaurant.html"><img src="../images/addpost.png"></a>
       <p>Add your gem</p>
     </div>
     <!-- Here is container for cards  -->
     <div class="container">
-      <div id="gemCardGroup" class="row row-cols-auto justify-content-center">
+      <div id="gemCardGroup" class="row row-cols-auto justify-content-center rounded">
         <template id="cardTemplate">
           <div class="card m-3" style="width: 25rem;">
-            <img class="card-image card-img-top" src="..." alt="..." width="100px" height="200px">
+            <img class="card-image card-img-top rounded" src="..." alt="..." width="100px" height="200px">
             <div class="card-body">
               <h5 class="card-title">Card title</h5>
               <p class="card-length">Some quick example text to build on the card title and make up the bulk of the
                 card's content.</p>
-              <a href="#" class="btn btn-primary" style="float: right">Read more</a>
+              <a class="btn btn-primary read-more" style="float: right">Read more</a>
               <i onclick="addLikes(gemID)" style="float: left"><img src="/images/heart.png"></i>
-              <p class="likes-slot" style="float: left;">text here</p>
             </div>
           </div>
         </template>
@@ -169,6 +168,8 @@
       </div>
     </div>
   </div>
+
+ 
 
 
   <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -219,11 +220,11 @@
 
 
 
-  <script src="/scripts/firebaseAPI.js"></script>
-  <script src="/scripts/cards.js"></script>
-  <script src="/scripts/authentication.js"></script>
-  <script src="/scripts/main.js"></script>
-  <script src="/scripts/search.js"></script>
+  <script src="../scripts/firebaseAPI.js"></script>
+  <script src="../scripts/cards.js"></script>
+  <script src="../scripts/authentication.js"></script>
+  <script src="../scripts/main.js"></script>
+  <script src="../scripts/search.js"></script>
 </body>
 
 </html>

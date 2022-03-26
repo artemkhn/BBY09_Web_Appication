@@ -3,28 +3,28 @@ function writeCards() {
     var cardsRef = db.collection("restaurants");
 
     cardsRef.add({
-        code: "001",
-        name: "Kissa Tanto", //replace with your own city?
-        city: "Vancouver",
-        province: "BC",
-        price: "$$$",
-        description: "Italian-Japanese cuisine & cocktails served in a chic space inspired by 1960's Tokyo jazz cafes."
-    });
-    cardsRef.add({
-        code: "002",
-        name: "Tacofino Taco Bar", //replace with your own city?
-        city: "Vancouver",
-        province: "BC",
-        price: "$",
-        description: "Casual, contemporary restaurant with West coast takes on classic Mexican food & a full bar."
-    });
-    cardsRef.add({
-        code: "003",
-        name: "Lunch Lady", //replace with your own city?
-        city: "Vancouver",
+        code: "010",
+        name: "Time & Place", //replace with your own city?
+        city: "Burnaby",
         province: "BC",
         price: "$$",
-        description: "Casual eatery offering Vietnamese staples such as pho, noodles & meat plates, plus unique cocktails."
+        description: "Time & Place is the place to gather and graze over an array of mains, sharable plates, and casual handhelds all prepared to perfection."
+    });
+    cardsRef.add({
+        code: "011",
+        name: "Isami Sushi", //replace with your own city?
+        city: "Surrey",
+        province: "BC",
+        price: "$$",
+        description: "Straightforward Japanese restaurant serving sushi, sashimi & hot entrees like teriyaki & tempura."
+    });
+    cardsRef.add({
+        code: "012",
+        name: "Tenen Restaurant", //replace with your own city?
+        city: "Burnaby",
+        province: "BC",
+        price: "$$",
+        description: "Eastern European specialties are presented in a cozy antiques-filled room with a back patio."
     });
 }
 
@@ -45,9 +45,9 @@ function displayCards() {
                 var testGemCard = cardTemplate.content.cloneNode(true);
                 testGemCard.querySelector('.card-title').innerHTML = name;
                 testGemCard.querySelector('.card-length').innerHTML = description;
-                testGemCard.querySelector('.likes-slot').innerHTML = likes;
                 testGemCard.querySelector('a').onclick = () => setHikeData(gemID);
                 testGemCard.querySelector('i').onclick = () => addLikes(gemID);
+                testGemCard.querySelector('.read-more').href = "eachGem.html?gemName="+name +"&id=" + gemID + "&description=" + description + "&image" + ;
                 testGemCard.querySelector('img').src = `/images/${gemID}.jpg`;
 
                 //give unique ids to all elements for future use
@@ -105,3 +105,4 @@ function displayLikes(id) {
 function updateLikes() {
 
 }
+

@@ -3,6 +3,8 @@ function writeReview() {
     let city = document.getElementById("city").value;
     let price = document.getElementById("price").value;
     let Description = document.getElementById("description").value;
+    let image = document.getElementById("image").value;
+
 
     let patio = document.querySelector('input[name="patio"]:checked').value;
     let reservation = document.querySelector('input[name="reservation"]:checked').value;
@@ -22,7 +24,8 @@ function writeReview() {
                             price: price,
                             description: Description,
                             patio: patio,
-                            reservation: reservation
+                            reservation: reservation,
+                            image: image
                         })
                         .then(function () {
 
@@ -36,6 +39,5 @@ function writeReview() {
     });
 
 }
-
 
 

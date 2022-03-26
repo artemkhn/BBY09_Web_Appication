@@ -105,4 +105,13 @@ color: lightblue;
 }
 
 
+.gemCardGroup {
+  border-radius: 100%;
+}
 
+.filter {
+  background: rgba(255, 183, 96, 0.849);
+  padding: 0.3% 0.5%;
+  margin-right: 1%;
+  border-radius: 10%;
+}

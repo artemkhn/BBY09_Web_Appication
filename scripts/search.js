@@ -16,7 +16,6 @@ function searchVancouver() {
                 let testGemCard = cardTemplate.content.cloneNode(true);
                 testGemCard.querySelector('.card-title').innerHTML = name;
                 testGemCard.querySelector('.card-length').innerHTML = description;
-                testGemCard.querySelector('.likes-slot').innerHTML = likes;
                 testGemCard.querySelector('a').onclick = () => setHikeData(gemID);
                 testGemCard.querySelector('i').onclick = () => addLikes(gemID);
                 testGemCard.querySelector('img').src = `/images/${gemID}.jpg`;
@@ -45,7 +44,6 @@ function searchBurnaby() {
                 let testGemCard = cardTemplate.content.cloneNode(true);
                 testGemCard.querySelector('.card-title').innerHTML = name;
                 testGemCard.querySelector('.card-length').innerHTML = description;
-                testGemCard.querySelector('.likes-slot').innerHTML = likes;
                 testGemCard.querySelector('a').onclick = () => setHikeData(gemID);
                 testGemCard.querySelector('i').onclick = () => addLikes(gemID);
                 testGemCard.querySelector('img').src = `/images/${gemID}.jpg`;
@@ -80,7 +78,6 @@ function searchLangley() {
                 let testGemCard = cardTemplate.content.cloneNode(true);
                 testGemCard.querySelector('.card-title').innerHTML = name;
                 testGemCard.querySelector('.card-length').innerHTML = description;
-                testGemCard.querySelector('.likes-slot').innerHTML = likes;
                 testGemCard.querySelector('a').onclick = () => setHikeData(gemID);
                 testGemCard.querySelector('i').onclick = () => addLikes(gemID);
                 testGemCard.querySelector('img').src = `/images/${gemID}.jpg`;
@@ -115,7 +112,6 @@ function searchSurrey() {
                 let testGemCard = cardTemplate.content.cloneNode(true);
                 testGemCard.querySelector('.card-title').innerHTML = name;
                 testGemCard.querySelector('.card-length').innerHTML = description;
-                testGemCard.querySelector('.likes-slot').innerHTML = likes;
                 testGemCard.querySelector('a').onclick = () => setHikeData(gemID);
                 testGemCard.querySelector('i').onclick = () => addLikes(gemID);
                 testGemCard.querySelector('img').src = `/images/${gemID}.jpg`;
@@ -150,7 +146,6 @@ function search$() {
                 let testGemCard = cardTemplate.content.cloneNode(true);
                 testGemCard.querySelector('.card-title').innerHTML = name;
                 testGemCard.querySelector('.card-length').innerHTML = description;
-                testGemCard.querySelector('.likes-slot').innerHTML = likes;
                 testGemCard.querySelector('a').onclick = () => setHikeData(gemID);
                 testGemCard.querySelector('i').onclick = () => addLikes(gemID);
                 testGemCard.querySelector('img').src = `/images/${gemID}.jpg`;
@@ -185,7 +180,6 @@ function search$$() {
                 let testGemCard = cardTemplate.content.cloneNode(true);
                 testGemCard.querySelector('.card-title').innerHTML = name;
                 testGemCard.querySelector('.card-length').innerHTML = description;
-                testGemCard.querySelector('.likes-slot').innerHTML = likes;
                 testGemCard.querySelector('a').onclick = () => setHikeData(gemID);
                 testGemCard.querySelector('i').onclick = () => addLikes(gemID);
                 testGemCard.querySelector('img').src = `/images/${gemID}.jpg`;
@@ -220,7 +214,6 @@ function search$$$() {
                 let testGemCard = cardTemplate.content.cloneNode(true);
                 testGemCard.querySelector('.card-title').innerHTML = name;
                 testGemCard.querySelector('.card-length').innerHTML = description;
-                testGemCard.querySelector('.likes-slot').innerHTML = likes;
                 testGemCard.querySelector('a').onclick = () => setHikeData(gemID);
                 testGemCard.querySelector('i').onclick = () => addLikes(gemID);
                 testGemCard.querySelector('img').src = `/images/${gemID}.jpg`;
@@ -255,7 +248,6 @@ function search$$$$() {
                 let testGemCard = cardTemplate.content.cloneNode(true);
                 testGemCard.querySelector('.card-title').innerHTML = name;
                 testGemCard.querySelector('.card-length').innerHTML = description;
-                testGemCard.querySelector('.likes-slot').innerHTML = likes;
                 testGemCard.querySelector('a').onclick = () => setHikeData(gemID);
                 testGemCard.querySelector('i').onclick = () => addLikes(gemID);
                 testGemCard.querySelector('img').src = `/images/${gemID}.jpg`;

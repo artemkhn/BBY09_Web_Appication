@@ -35,12 +35,13 @@ function displayCards(collection) {
             snap.forEach(doc => { //iterate thru each doc
                 var name = doc.data().name; // get value of the "name" key
                 var description = doc.data().description; // get value of the "details" key
+                var image = doc.data().image;
                 let newcard = cardTemplate.content.cloneNode(true);
 
                 //update title and text and image
                 newcard.querySelector('.card-title').innerHTML = name;
                 newcard.querySelector('.card-text').innerHTML = description;
-                newcard.querySelector('.card-image').src = "./images/" + name + ".jpg"; 
+                newcard.querySelector('.card-image').src = "/images/" + image + ".jpg"; 
 
                 //give unique ids to all elements for future use
                 // newcard.querySelector('.card-title').setAttribute("id", "ctitle" + i);
