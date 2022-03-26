@@ -47,7 +47,7 @@ function displayCards() {
                 testGemCard.querySelector('.card-length').innerHTML = description;
                 testGemCard.querySelector('a').onclick = () => setHikeData(gemID);
                 testGemCard.querySelector('i').onclick = () => addLikes(gemID);
-                testGemCard.querySelector('.read-more').href = "eachGem.html?gemName="+name +"&id=" + gemID + "&description=" + description + "&image" + ;
+                testGemCard.querySelector('.read-more').href = "eachGem.html?gemName="+name +"&id=" + gemID + "&description=" + description;
                 testGemCard.querySelector('img').src = `/images/${gemID}.jpg`;
 
                 //give unique ids to all elements for future use
@@ -102,7 +102,5 @@ function displayLikes(id) {
         });
 }
 
-function updateLikes() {
 
-}
 
