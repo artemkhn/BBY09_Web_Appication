@@ -21,7 +21,7 @@ function writeSupport() {
                     })
                     .then(function(){
 
-                        window.location.href = "index.html";
+                        window.location.href = "thankyoureq.html";
                     });
                 })
         } else {

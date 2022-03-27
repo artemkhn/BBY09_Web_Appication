@@ -29,7 +29,7 @@ function writeReview() {
                         })
                         .then(function () {
 
-                            window.location.href = "index.html";
+                            window.location.href = "thankyoupost.html";
                         });
                 })
         } else {
