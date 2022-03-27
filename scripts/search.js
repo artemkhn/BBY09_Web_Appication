@@ -11,14 +11,17 @@ function searchVancouver() {
                 var description = doc.data().description; // get value of the "description" key
                 var gemID = doc.data().id; //gets the unique ID field
                 var likes = doc.data().likes;
+                var image = doc.data().image
 
                 //update title and text and image
-                let testGemCard = cardTemplate.content.cloneNode(true);
+                var testGemCard = cardTemplate.content.cloneNode(true);
                 testGemCard.querySelector('.card-title').innerHTML = name;
                 testGemCard.querySelector('.card-length').innerHTML = description;
                 testGemCard.querySelector('a').onclick = () => setHikeData(gemID);
                 testGemCard.querySelector('i').onclick = () => addLikes(gemID);
-                testGemCard.querySelector('img').src = `/images/${gemID}.jpg`;
+                testGemCard.querySelector('.read-more').href = "eachGem.html?gemName="+name +"&id=" + gemID + "&description=" + description + "&image=" + image;
+                testGemCard.querySelector('img').src = "/images/" + image + ".jpg";
+
 
                 gemCardGroup.appendChild(testGemCard);
         });
@@ -39,14 +42,16 @@ function searchBurnaby() {
                 var description = doc.data().description; // get value of the "details" key
                 var gemID = doc.data().id; //gets the unique ID field
                 var likes = doc.data().likes;
+                var image = doc.data().image
 
                 //update title and text and image
-                let testGemCard = cardTemplate.content.cloneNode(true);
+                var testGemCard = cardTemplate.content.cloneNode(true);
                 testGemCard.querySelector('.card-title').innerHTML = name;
                 testGemCard.querySelector('.card-length').innerHTML = description;
                 testGemCard.querySelector('a').onclick = () => setHikeData(gemID);
                 testGemCard.querySelector('i').onclick = () => addLikes(gemID);
-                testGemCard.querySelector('img').src = `/images/${gemID}.jpg`;
+                testGemCard.querySelector('.read-more').href = "eachGem.html?gemName="+name +"&id=" + gemID + "&description=" + description + "&image=" + image;
+                testGemCard.querySelector('img').src = "/images/" + image + ".jpg";
 
                 //give unique ids to all elements for future use
                 // newcard.querySelector('.card-title').setAttribute("id", "ctitle" + i);
@@ -73,14 +78,17 @@ function searchLangley() {
                 var description = doc.data().description; // get value of the "details" key
                 var gemID = doc.data().id; //gets the unique ID field
                 var likes = doc.data().likes;
+                var image = doc.data().image
 
                 //update title and text and image
-                let testGemCard = cardTemplate.content.cloneNode(true);
+                var testGemCard = cardTemplate.content.cloneNode(true);
                 testGemCard.querySelector('.card-title').innerHTML = name;
                 testGemCard.querySelector('.card-length').innerHTML = description;
                 testGemCard.querySelector('a').onclick = () => setHikeData(gemID);
                 testGemCard.querySelector('i').onclick = () => addLikes(gemID);
-                testGemCard.querySelector('img').src = `/images/${gemID}.jpg`;
+                testGemCard.querySelector('.read-more').href = "eachGem.html?gemName="+name +"&id=" + gemID + "&description=" + description + "&image=" + image;
+                testGemCard.querySelector('img').src = "/images/" + image + ".jpg";
+
 
                 //give unique ids to all elements for future use
                 // newcard.querySelector('.card-title').setAttribute("id", "ctitle" + i);
@@ -107,14 +115,17 @@ function searchSurrey() {
                 var description = doc.data().description; // get value of the "details" key
                 var gemID = doc.data().id; //gets the unique ID field
                 var likes = doc.data().likes;
+                var image = doc.data().image
 
                 //update title and text and image
-                let testGemCard = cardTemplate.content.cloneNode(true);
+                var testGemCard = cardTemplate.content.cloneNode(true);
                 testGemCard.querySelector('.card-title').innerHTML = name;
                 testGemCard.querySelector('.card-length').innerHTML = description;
                 testGemCard.querySelector('a').onclick = () => setHikeData(gemID);
                 testGemCard.querySelector('i').onclick = () => addLikes(gemID);
-                testGemCard.querySelector('img').src = `/images/${gemID}.jpg`;
+                testGemCard.querySelector('.read-more').href = "eachGem.html?gemName="+name +"&id=" + gemID + "&description=" + description + "&image=" + image;
+                testGemCard.querySelector('img').src = "/images/" + image + ".jpg";
+
 
                 //give unique ids to all elements for future use
                 // newcard.querySelector('.card-title').setAttribute("id", "ctitle" + i);
@@ -141,14 +152,17 @@ function search$() {
                 var description = doc.data().description; // get value of the "details" key
                 var gemID = doc.data().id; //gets the unique ID field
                 var likes = doc.data().likes;
+                var image = doc.data().image
 
                 //update title and text and image
-                let testGemCard = cardTemplate.content.cloneNode(true);
+                var testGemCard = cardTemplate.content.cloneNode(true);
                 testGemCard.querySelector('.card-title').innerHTML = name;
                 testGemCard.querySelector('.card-length').innerHTML = description;
                 testGemCard.querySelector('a').onclick = () => setHikeData(gemID);
                 testGemCard.querySelector('i').onclick = () => addLikes(gemID);
-                testGemCard.querySelector('img').src = `/images/${gemID}.jpg`;
+                testGemCard.querySelector('.read-more').href = "eachGem.html?gemName="+name +"&id=" + gemID + "&description=" + description + "&image=" + image;
+                testGemCard.querySelector('img').src = "/images/" + image + ".jpg";
+
 
                 //give unique ids to all elements for future use
                 // newcard.querySelector('.card-title').setAttribute("id", "ctitle" + i);
@@ -175,14 +189,17 @@ function search$$() {
                 var description = doc.data().description; // get value of the "details" key
                 var gemID = doc.data().id; //gets the unique ID field
                 var likes = doc.data().likes;
+                var image = doc.data().image
 
                 //update title and text and image
-                let testGemCard = cardTemplate.content.cloneNode(true);
+                var testGemCard = cardTemplate.content.cloneNode(true);
                 testGemCard.querySelector('.card-title').innerHTML = name;
                 testGemCard.querySelector('.card-length').innerHTML = description;
                 testGemCard.querySelector('a').onclick = () => setHikeData(gemID);
                 testGemCard.querySelector('i').onclick = () => addLikes(gemID);
-                testGemCard.querySelector('img').src = `/images/${gemID}.jpg`;
+                testGemCard.querySelector('.read-more').href = "eachGem.html?gemName="+name +"&id=" + gemID + "&description=" + description + "&image=" + image;
+                testGemCard.querySelector('img').src = "/images/" + image + ".jpg";
+
 
                 //give unique ids to all elements for future use
                 // newcard.querySelector('.card-title').setAttribute("id", "ctitle" + i);
@@ -209,14 +226,17 @@ function search$$$() {
                 var description = doc.data().description; // get value of the "details" key
                 var gemID = doc.data().id; //gets the unique ID field
                 var likes = doc.data().likes;
+                var image = doc.data().image
 
                 //update title and text and image
-                let testGemCard = cardTemplate.content.cloneNode(true);
+                var testGemCard = cardTemplate.content.cloneNode(true);
                 testGemCard.querySelector('.card-title').innerHTML = name;
                 testGemCard.querySelector('.card-length').innerHTML = description;
                 testGemCard.querySelector('a').onclick = () => setHikeData(gemID);
                 testGemCard.querySelector('i').onclick = () => addLikes(gemID);
-                testGemCard.querySelector('img').src = `/images/${gemID}.jpg`;
+                testGemCard.querySelector('.read-more').href = "eachGem.html?gemName="+name +"&id=" + gemID + "&description=" + description + "&image=" + image;
+                testGemCard.querySelector('img').src = "/images/" + image + ".jpg";
+
 
                 //give unique ids to all elements for future use
                 // newcard.querySelector('.card-title').setAttribute("id", "ctitle" + i);
@@ -243,14 +263,17 @@ function search$$$$() {
                 var description = doc.data().description; // get value of the "details" key
                 var gemID = doc.data().id; //gets the unique ID field
                 var likes = doc.data().likes;
+                var image = doc.data().image
 
                 //update title and text and image
-                let testGemCard = cardTemplate.content.cloneNode(true);
+                var testGemCard = cardTemplate.content.cloneNode(true);
                 testGemCard.querySelector('.card-title').innerHTML = name;
                 testGemCard.querySelector('.card-length').innerHTML = description;
                 testGemCard.querySelector('a').onclick = () => setHikeData(gemID);
                 testGemCard.querySelector('i').onclick = () => addLikes(gemID);
-                testGemCard.querySelector('img').src = `/images/${gemID}.jpg`;
+                testGemCard.querySelector('.read-more').href = "eachGem.html?gemName="+name +"&id=" + gemID + "&description=" + description + "&image=" + image;
+                testGemCard.querySelector('img').src = "/images/" + image + ".jpg";
+
 
                 //give unique ids to all elements for future use
                 // newcard.querySelector('.card-title').setAttribute("id", "ctitle" + i);
