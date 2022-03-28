@@ -8,19 +8,23 @@ function searchVancouver() {
         querySnapshot.forEach((doc) => {
             // doc.data() is never undefined for query doc snapshots
             var name = doc.data().name; // get value of the "name" key
-                var description = doc.data().description; // get value of the "description" key
-                var gemID = doc.data().id; //gets the unique ID field
-                var likes = doc.data().likes;
-                var image = doc.data().image
+            var description = doc.data().description; // get value of the "details" key
+            var gemID = doc.data().id; //gets the unique ID field
+            var image = doc.data().image;
+            var city = doc.data().city;
+            var province = doc.data().province;
+            var patio = doc.data().patio;
+            var reservation = doc.data().reservation;
+            var likes = doc.data().likes;
 
-                //update title and text and image
-                var testGemCard = cardTemplate.content.cloneNode(true);
-                testGemCard.querySelector('.card-title').innerHTML = name;
-                testGemCard.querySelector('.card-length').innerHTML = description;
-                testGemCard.querySelector('a').onclick = () => setHikeData(gemID);
-                testGemCard.querySelector('i').onclick = () => addLikes(gemID);
-                testGemCard.querySelector('.read-more').href = "eachGem.html?gemName="+name +"&id=" + gemID + "&description=" + description + "&image=" + image;
-                testGemCard.querySelector('img').src = "/images/" + image + ".jpg";
+            //update title and text and image
+            var testGemCard = cardTemplate.content.cloneNode(true);
+            testGemCard.querySelector('.card-title').innerHTML = name;
+            testGemCard.querySelector('.card-length').innerHTML = description;
+            testGemCard.querySelector('a').onclick = () => setHikeData(gemID);
+            testGemCard.querySelector('i').onclick = () => addLikes(gemID);
+            testGemCard.querySelector('.read-more').href = "eachGem.html?gemName="+name +"&id=" + gemID + "&description=" + description + "&image=" + image + "&city=" + city + "&province=" + province + "&patio=" + patio + "&reservation=" + reservation + "&likes=" + likes;
+            testGemCard.querySelector('img').src = "/images/" + image + ".jpg";
 
 
                 gemCardGroup.appendChild(testGemCard);
@@ -41,8 +45,12 @@ function searchBurnaby() {
             var name = doc.data().name; // get value of the "name" key
                 var description = doc.data().description; // get value of the "details" key
                 var gemID = doc.data().id; //gets the unique ID field
+                var image = doc.data().image;
+                var city = doc.data().city;
+                var province = doc.data().province;
+                var patio = doc.data().patio;
+                var reservation = doc.data().reservation;
                 var likes = doc.data().likes;
-                var image = doc.data().image
 
                 //update title and text and image
                 var testGemCard = cardTemplate.content.cloneNode(true);
@@ -50,7 +58,7 @@ function searchBurnaby() {
                 testGemCard.querySelector('.card-length').innerHTML = description;
                 testGemCard.querySelector('a').onclick = () => setHikeData(gemID);
                 testGemCard.querySelector('i').onclick = () => addLikes(gemID);
-                testGemCard.querySelector('.read-more').href = "eachGem.html?gemName="+name +"&id=" + gemID + "&description=" + description + "&image=" + image;
+                testGemCard.querySelector('.read-more').href = "eachGem.html?gemName="+name +"&id=" + gemID + "&description=" + description + "&image=" + image + "&city=" + city + "&province=" + province + "&patio=" + patio + "&reservation=" + reservation + "&likes=" + likes;
                 testGemCard.querySelector('img').src = "/images/" + image + ".jpg";
 
                 //give unique ids to all elements for future use
@@ -77,8 +85,12 @@ function searchLangley() {
             var name = doc.data().name; // get value of the "name" key
                 var description = doc.data().description; // get value of the "details" key
                 var gemID = doc.data().id; //gets the unique ID field
+                var image = doc.data().image;
+                var city = doc.data().city;
+                var province = doc.data().province;
+                var patio = doc.data().patio;
+                var reservation = doc.data().reservation;
                 var likes = doc.data().likes;
-                var image = doc.data().image
 
                 //update title and text and image
                 var testGemCard = cardTemplate.content.cloneNode(true);
@@ -86,7 +98,7 @@ function searchLangley() {
                 testGemCard.querySelector('.card-length').innerHTML = description;
                 testGemCard.querySelector('a').onclick = () => setHikeData(gemID);
                 testGemCard.querySelector('i').onclick = () => addLikes(gemID);
-                testGemCard.querySelector('.read-more').href = "eachGem.html?gemName="+name +"&id=" + gemID + "&description=" + description + "&image=" + image;
+                testGemCard.querySelector('.read-more').href = "eachGem.html?gemName="+name +"&id=" + gemID + "&description=" + description + "&image=" + image + "&city=" + city + "&province=" + province + "&patio=" + patio + "&reservation=" + reservation + "&likes=" + likes;
                 testGemCard.querySelector('img').src = "/images/" + image + ".jpg";
 
 
@@ -114,8 +126,12 @@ function searchSurrey() {
             var name = doc.data().name; // get value of the "name" key
                 var description = doc.data().description; // get value of the "details" key
                 var gemID = doc.data().id; //gets the unique ID field
+                var image = doc.data().image;
+                var city = doc.data().city;
+                var province = doc.data().province;
+                var patio = doc.data().patio;
+                var reservation = doc.data().reservation;
                 var likes = doc.data().likes;
-                var image = doc.data().image
 
                 //update title and text and image
                 var testGemCard = cardTemplate.content.cloneNode(true);
@@ -123,7 +139,7 @@ function searchSurrey() {
                 testGemCard.querySelector('.card-length').innerHTML = description;
                 testGemCard.querySelector('a').onclick = () => setHikeData(gemID);
                 testGemCard.querySelector('i').onclick = () => addLikes(gemID);
-                testGemCard.querySelector('.read-more').href = "eachGem.html?gemName="+name +"&id=" + gemID + "&description=" + description + "&image=" + image;
+                testGemCard.querySelector('.read-more').href = "eachGem.html?gemName="+name +"&id=" + gemID + "&description=" + description + "&image=" + image + "&city=" + city + "&province=" + province + "&patio=" + patio + "&reservation=" + reservation + "&likes=" + likes;
                 testGemCard.querySelector('img').src = "/images/" + image + ".jpg";
 
 
@@ -151,8 +167,12 @@ function search$() {
             var name = doc.data().name; // get value of the "name" key
                 var description = doc.data().description; // get value of the "details" key
                 var gemID = doc.data().id; //gets the unique ID field
+                var image = doc.data().image;
+                var city = doc.data().city;
+                var province = doc.data().province;
+                var patio = doc.data().patio;
+                var reservation = doc.data().reservation;
                 var likes = doc.data().likes;
-                var image = doc.data().image
 
                 //update title and text and image
                 var testGemCard = cardTemplate.content.cloneNode(true);
@@ -160,7 +180,7 @@ function search$() {
                 testGemCard.querySelector('.card-length').innerHTML = description;
                 testGemCard.querySelector('a').onclick = () => setHikeData(gemID);
                 testGemCard.querySelector('i').onclick = () => addLikes(gemID);
-                testGemCard.querySelector('.read-more').href = "eachGem.html?gemName="+name +"&id=" + gemID + "&description=" + description + "&image=" + image;
+                testGemCard.querySelector('.read-more').href = "eachGem.html?gemName="+name +"&id=" + gemID + "&description=" + description + "&image=" + image + "&city=" + city + "&province=" + province + "&patio=" + patio + "&reservation=" + reservation + "&likes=" + likes;
                 testGemCard.querySelector('img').src = "/images/" + image + ".jpg";
 
 
@@ -188,8 +208,12 @@ function search$$() {
             var name = doc.data().name; // get value of the "name" key
                 var description = doc.data().description; // get value of the "details" key
                 var gemID = doc.data().id; //gets the unique ID field
+                var image = doc.data().image;
+                var city = doc.data().city;
+                var province = doc.data().province;
+                var patio = doc.data().patio;
+                var reservation = doc.data().reservation;
                 var likes = doc.data().likes;
-                var image = doc.data().image
 
                 //update title and text and image
                 var testGemCard = cardTemplate.content.cloneNode(true);
@@ -197,9 +221,8 @@ function search$$() {
                 testGemCard.querySelector('.card-length').innerHTML = description;
                 testGemCard.querySelector('a').onclick = () => setHikeData(gemID);
                 testGemCard.querySelector('i').onclick = () => addLikes(gemID);
-                testGemCard.querySelector('.read-more').href = "eachGem.html?gemName="+name +"&id=" + gemID + "&description=" + description + "&image=" + image;
+                testGemCard.querySelector('.read-more').href = "eachGem.html?gemName="+name +"&id=" + gemID + "&description=" + description + "&image=" + image + "&city=" + city + "&province=" + province + "&patio=" + patio + "&reservation=" + reservation + "&likes=" + likes;
                 testGemCard.querySelector('img').src = "/images/" + image + ".jpg";
-
 
                 //give unique ids to all elements for future use
                 // newcard.querySelector('.card-title').setAttribute("id", "ctitle" + i);
@@ -225,8 +248,12 @@ function search$$$() {
             var name = doc.data().name; // get value of the "name" key
                 var description = doc.data().description; // get value of the "details" key
                 var gemID = doc.data().id; //gets the unique ID field
+                var image = doc.data().image;
+                var city = doc.data().city;
+                var province = doc.data().province;
+                var patio = doc.data().patio;
+                var reservation = doc.data().reservation;
                 var likes = doc.data().likes;
-                var image = doc.data().image
 
                 //update title and text and image
                 var testGemCard = cardTemplate.content.cloneNode(true);
@@ -234,7 +261,7 @@ function search$$$() {
                 testGemCard.querySelector('.card-length').innerHTML = description;
                 testGemCard.querySelector('a').onclick = () => setHikeData(gemID);
                 testGemCard.querySelector('i').onclick = () => addLikes(gemID);
-                testGemCard.querySelector('.read-more').href = "eachGem.html?gemName="+name +"&id=" + gemID + "&description=" + description + "&image=" + image;
+                testGemCard.querySelector('.read-more').href = "eachGem.html?gemName="+name +"&id=" + gemID + "&description=" + description + "&image=" + image + "&city=" + city + "&province=" + province + "&patio=" + patio + "&reservation=" + reservation + "&likes=" + likes;
                 testGemCard.querySelector('img').src = "/images/" + image + ".jpg";
 
 
@@ -262,8 +289,12 @@ function search$$$$() {
             var name = doc.data().name; // get value of the "name" key
                 var description = doc.data().description; // get value of the "details" key
                 var gemID = doc.data().id; //gets the unique ID field
+                var image = doc.data().image;
+                var city = doc.data().city;
+                var province = doc.data().province;
+                var patio = doc.data().patio;
+                var reservation = doc.data().reservation;
                 var likes = doc.data().likes;
-                var image = doc.data().image
 
                 //update title and text and image
                 var testGemCard = cardTemplate.content.cloneNode(true);
@@ -271,7 +302,7 @@ function search$$$$() {
                 testGemCard.querySelector('.card-length').innerHTML = description;
                 testGemCard.querySelector('a').onclick = () => setHikeData(gemID);
                 testGemCard.querySelector('i').onclick = () => addLikes(gemID);
-                testGemCard.querySelector('.read-more').href = "eachGem.html?gemName="+name +"&id=" + gemID + "&description=" + description + "&image=" + image;
+                testGemCard.querySelector('.read-more').href = "eachGem.html?gemName="+name +"&id=" + gemID + "&description=" + description + "&image=" + image + "&city=" + city + "&province=" + province + "&patio=" + patio + "&reservation=" + reservation + "&likes=" + likes;
                 testGemCard.querySelector('img').src = "/images/" + image + ".jpg";
 
 
