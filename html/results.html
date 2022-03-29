@@ -21,11 +21,11 @@
 
   <!-- Firebase 8 Library related CSS CDN go here -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
-    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
   <!-- Firebase 8 Library related JS CDN go here-->
 
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -82,11 +82,11 @@
     </div>
   </nav>
 
-  
+
 
 
   <div class="px-4start py-5 my-5 text-center xx">
-  
+
     <!-- <img  src="./images/MealVault.png" alt="" width="125px" height="100px"> -->
     <!-- <h1 class="display-5 fw-bold heading1">MealVault</h1> -->
     <div class="col-lg-6 mx-auto">
@@ -97,72 +97,84 @@
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form>
       <div class="px-4pref py-5 my-5 text-center">
-          <form id="pref">
-            <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Rating</button>
-            <ul class="dropdown-menu">
-              <li> &nbsp; <input type="checkbox"> &nbsp; 1 Star</li>
-              <li> &nbsp; <input type="checkbox"> &nbsp; 2 Stars</li>
-              <li> &nbsp; <input type="checkbox"> &nbsp; 3 Stars</li>
-              <li> &nbsp; <input type="checkbox"> &nbsp; 4 Stars</li>
-              <li> &nbsp; <input type="checkbox"> &nbsp; 5 Stars</li>
-              <li><hr class="dropdown-divider"></li>
-            </ul>
-        
-            <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Price</button>
-            <ul class="dropdown-menu">
-              <li> &nbsp; <input type="checkbox"> &nbsp; Under $10</li>
-              <li> &nbsp; <input type="checkbox"> &nbsp; $10 - $20</li>
-              <li> &nbsp; <input type="checkbox"> &nbsp; $20 - $30</li>
-              <li> &nbsp; <input type="checkbox"> &nbsp; $40 - $50</li>
-              <li> &nbsp; <input type="checkbox"> &nbsp; Above $50</li>
-              <li><hr class="dropdown-divider"></li>
-            </ul>
-        
-           
-        
-            <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Dietary Preferences</button>
-            <ul class="dropdown-menu">
-              <li> &nbsp; <input type="checkbox"> &nbsp; Vegetarian</li>
-              <li> &nbsp; <input type="checkbox"> &nbsp; Vegan</li>
-              <li> &nbsp; <input type="checkbox"> &nbsp; Lactose-Free</li>
-              <li> &nbsp; <input type="checkbox"> &nbsp; Pescatarian</li>
-              <li> &nbsp; <input type="checkbox"> &nbsp; Gluten-Free</li>
-              <li> &nbsp; <input type="checkbox"> &nbsp; Kosher</li>
-              <li> &nbsp; <input type="checkbox"> &nbsp; Halal</li>
-              <li> &nbsp; <input type="checkbox"> &nbsp; Keto</li>
-              <li> &nbsp; <input type="checkbox"> &nbsp; Peanut-Free</li>
-              <li><hr class="dropdown-divider"></li>
-            </ul>
-        
-            <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Categories</button>
-            <ul class="dropdown-menu">
-              <li> &nbsp; <input type="checkbox"> &nbsp; Fast Food</li>
-              <li> &nbsp; <input type="checkbox"> &nbsp; Dine-In</li>
-              <li> &nbsp; <input type="checkbox"> &nbsp; Western</li>
-              <li> &nbsp; <input type="checkbox"> &nbsp; Southern</li>
-              <li> &nbsp; <input type="checkbox"> &nbsp; Indian</li>
-              <li> &nbsp; <input type="checkbox"> &nbsp; Italian</li>
-              <li> &nbsp; <input type="checkbox"> &nbsp; Asian</li>
-              <li> &nbsp; <input type="checkbox"> &nbsp; Persian</li>
-              <li><hr class="dropdown-divider"></li>
-              
-            </ul>
-        
-        
-         </form>
-          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-            <!-- <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Primary button</button> -->
-            <!-- <button type="button" class="btn btn-outline-secondary btn-lg px-4">Secondary</button> -->
-          
-          </div>
+        <form id="pref">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"
+            aria-expanded="false">Rating</button>
+          <ul class="dropdown-menu">
+            <li> &nbsp; <input type="checkbox"> &nbsp; 1 Star</li>
+            <li> &nbsp; <input type="checkbox"> &nbsp; 2 Stars</li>
+            <li> &nbsp; <input type="checkbox"> &nbsp; 3 Stars</li>
+            <li> &nbsp; <input type="checkbox"> &nbsp; 4 Stars</li>
+            <li> &nbsp; <input type="checkbox"> &nbsp; 5 Stars</li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+          </ul>
+
+          <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"
+            aria-expanded="false">Price</button>
+          <ul class="dropdown-menu">
+            <li> &nbsp; <input type="checkbox"> &nbsp; Under $10</li>
+            <li> &nbsp; <input type="checkbox"> &nbsp; $10 - $20</li>
+            <li> &nbsp; <input type="checkbox"> &nbsp; $20 - $30</li>
+            <li> &nbsp; <input type="checkbox"> &nbsp; $40 - $50</li>
+            <li> &nbsp; <input type="checkbox"> &nbsp; Above $50</li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+          </ul>
+
+
+
+          <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"
+            aria-expanded="false">Dietary Preferences</button>
+          <ul class="dropdown-menu">
+            <li> &nbsp; <input type="checkbox"> &nbsp; Vegetarian</li>
+            <li> &nbsp; <input type="checkbox"> &nbsp; Vegan</li>
+            <li> &nbsp; <input type="checkbox"> &nbsp; Lactose-Free</li>
+            <li> &nbsp; <input type="checkbox"> &nbsp; Pescatarian</li>
+            <li> &nbsp; <input type="checkbox"> &nbsp; Gluten-Free</li>
+            <li> &nbsp; <input type="checkbox"> &nbsp; Kosher</li>
+            <li> &nbsp; <input type="checkbox"> &nbsp; Halal</li>
+            <li> &nbsp; <input type="checkbox"> &nbsp; Keto</li>
+            <li> &nbsp; <input type="checkbox"> &nbsp; Peanut-Free</li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+          </ul>
+
+          <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"
+            aria-expanded="false">Categories</button>
+          <ul class="dropdown-menu">
+            <li> &nbsp; <input type="checkbox"> &nbsp; Fast Food</li>
+            <li> &nbsp; <input type="checkbox"> &nbsp; Dine-In</li>
+            <li> &nbsp; <input type="checkbox"> &nbsp; Western</li>
+            <li> &nbsp; <input type="checkbox"> &nbsp; Southern</li>
+            <li> &nbsp; <input type="checkbox"> &nbsp; Indian</li>
+            <li> &nbsp; <input type="checkbox"> &nbsp; Italian</li>
+            <li> &nbsp; <input type="checkbox"> &nbsp; Asian</li>
+            <li> &nbsp; <input type="checkbox"> &nbsp; Persian</li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+          </ul>
+
+
+        </form>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+          <!-- <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Primary button</button> -->
+          <!-- <button type="button" class="btn btn-outline-secondary btn-lg px-4">Secondary</button> -->
+
         </div>
       </div>
-      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-        <!-- <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Primary button</button> -->
-        <!-- <button type="button" class="btn btn-outline-secondary btn-lg px-4">Secondary</button> -->
-     
-      </div>
     </div>
+    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+      <!-- <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Primary button</button> -->
+      <!-- <button type="button" class="btn btn-outline-secondary btn-lg px-4">Secondary</button> -->
+
+    </div>
+  </div>
   </div>
   <div class="container">
     <h1 class="d-flex justify-content-center align-content-center">Results</h1>
@@ -181,7 +193,7 @@
             </div>
           </div>
         </template>
-        
+
       </div>
     </div>
   </div>
@@ -210,11 +222,28 @@
     </symbol>
   </svg>
 
-      <div id="addpost">
-        
-        <p>Add Post</p>
-      </div>
-      
+  <div id="addpost">
+
+    <p>Add Post</p>
+  </div>
+
+  <nav class="mobile-nav">
+    <a href="./index.html" class="bloc-icon" id="option1">
+      <img src="../images/home.png" alt="">
+    </a>
+    <a href="./profile.html" class="bloc-icon" id="option2">
+      <img src="../images/profile.png" alt="">
+    </a>
+    <a href="./addrestaurant.html" class="bloc-icon" id="option3">
+      <img src="../images/add.png" alt="">
+    </a>
+    <a href="./rewards.html" class="bloc-icon" id="option4">
+      <img src="../images/gift.png" alt="">
+    </a>
+    <a href="./moreoptions.html" class="bloc-icon" id="option5">
+      <img src="../images/application.png" alt="">
+    </a>
+  </nav>
 
   <script src="../scripts/firebaseAPI.js"></script>
   <script src="../scripts/cards.js"></script>

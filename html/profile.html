@@ -81,6 +81,8 @@
   </nav>
 
   <div class="container">
+    <br>
+    <br>
     <h1 id="userview">MyProfile</h1>
     <div class="container text-center py-3">
       <img id="mypic-goes-here" src="images/blah.jpg" width=50 height=50 />
@@ -90,7 +92,7 @@
       <br>
       <img class="mx-auto d-block" id="image-goes-here" src=""  width="300px"/>
     </div>
-    <form>
+    <form id="userProfile">
         <fieldset class="mb-3" id="profilefeilds" disabled>
             <div class="form-group">
                 <label>Name</label>
@@ -112,10 +114,12 @@
         <div class="d-flex justify-content-end mt-5">
             <button type="button" class="btn btn-secondary" onclick="editUserProfile()">Edit</button>
             <span style="width: 10px"></span>
-            <button type="button" class="btn btn-info"onclick="saveUserProfile()">Save</button>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" type="button" class="btn btn-info"onclick="saveUserProfile()">Save</button>
         </div>
     </form>
 </div>
+
+ 
  
   <div class="container">
     <br>
@@ -141,6 +145,24 @@
       </div>
     </div>
   </div>
+
+  <nav class="mobile-nav">
+    <a href="./index.html" class="bloc-icon" id="option1">
+      <img src="../images/home.png" alt="">
+    </a>
+    <a href="./profile.html" class="bloc-icon" id="option2">
+      <img src="../images/profile.png" alt="">
+    </a>
+    <a href="./addrestaurant.html" class="bloc-icon" id="option3">
+      <img src="../images/add.png" alt="">
+    </a>
+    <a href="./rewards.html" class="bloc-icon" id="option4">
+      <img src="../images/gift.png" alt="">
+    </a>
+    <a href="./moreoptions.html" class="bloc-icon" id="option5">
+      <img src="../images/application.png" alt="">
+    </a>
+  </nav>
 
 
   <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">

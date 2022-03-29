@@ -1,0 +1,43 @@
+
+
+.midoptions a{
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+
+.leastoptions a{
+    text-align: center;
+    text-decoration: none;
+    color: grey;
+    opacity: 0.7;
+}
+
+.opred a{
+    text-align: center;
+    text-decoration: none;
+    color: tomato;
+}
+
+.options a{
+    text-align: center;
+    text-decoration: none;
+    
+}
+
+.options:hover{
+    background-color: grey;
+}
+
+.midoptions:hover{
+    background-color: grey;
+}
+
+.leastoptions:hover{
+    background-color: grey;
+}
+
+.opred:hover{
+    background-color: grey;
+}
+

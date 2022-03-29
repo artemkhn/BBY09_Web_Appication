@@ -17,6 +17,10 @@ body {
   user-select: none;
 }
 
+.collapse{
+  visibility: visible;
+}
+
 .card {
   object-fit: fill;
 }
@@ -47,6 +51,7 @@ body {
 
 .navbar {
   background-color: wheat;
+  visibility: visible;
 }
 
 .btn {
@@ -137,3 +142,71 @@ h5 {
 #aboutdesc{
   text-align: center;
 }
+
+
+.mobile-nav {
+  background: #F1F1F1;
+  position: fixed;
+  bottom: 0;
+  height: 65px;
+  width: 100%; 
+  display: flex;
+  justify-content: space-around;
+  visibility: hidden;
+  border: 3px solid black;
+  border-radius: 10px;
+}
+
+.bloc-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  border: 2px;
+}
+
+#option1:hover{
+  background-color: grey;
+}
+
+#option2:hover{
+  background-color: grey;
+}
+
+#option3:hover{
+  background-color: grey;
+}
+
+#option4:hover{
+  background-color: grey;
+}
+
+#option5:hover{
+  background-color: grey;
+}
+
+.bloc-icon img {
+  width: 30px;
+}
+
+@media only screen and (max-width: 600px){
+  .mobile-nav{
+    visibility: visible;
+  }
+
+  .collapse{
+    visibility: hidden;
+  }
+
+  .navbar-toggler{
+    visibility: hidden;
+  }
+
+  footer{
+    visibility: hidden;
+  }
+}
+
+
+
+
