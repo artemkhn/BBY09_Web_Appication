@@ -74,13 +74,20 @@ function displayCards(collection) {
             snap.forEach(doc => { //iterate thru each doc
                 var name = doc.data().name; // get value of the "name" key
                 var description = doc.data().description; // get value of the "details" key
+                var gemID = doc.data().id; //gets the unique ID field
                 var image = doc.data().image;
-                let newcard = cardTemplate.content.cloneNode(true);
+                var city = doc.data().city;
+                var province = doc.data().province;
+                var patio = doc.data().patio;
+                var reservation = doc.data().reservation;
+                var likes = doc.data().likes;
 
                 //update title and text and image
-                newcard.querySelector('.card-title').innerHTML = name;
-                newcard.querySelector('.card-text').innerHTML = description;
-                newcard.querySelector('.card-image').src = "/images/" + image + ".jpg"; 
+                var testGemCard = cardTemplate.content.cloneNode(true);
+                testGemCard.querySelector('.card-title').innerHTML = name;
+                testGemCard.querySelector('.card-length').innerHTML = description;
+                testGemCard.querySelector('.read-more').href = "eachGem-profile.html?gemName=" + name + "&description=" + description + "&image=" + image + "&city=" + city + "&province=" + province + "&patio=" + patio + "&reservation=" + reservation;
+                testGemCard.querySelector('img').src = "/images/" + image + ".jpg";
 
                 //give unique ids to all elements for future use
                 // newcard.querySelector('.card-title').setAttribute("id", "ctitle" + i);
@@ -88,12 +95,13 @@ function displayCards(collection) {
                 // newcard.querySelector('.card-image').setAttribute("id", "cimage" + i);
 
                 //attach to gallery
-                document.getElementById(collection + "-go-here").appendChild(newcard);
+                document.getElementById(collection + "-go-here").appendChild(testGemCard);
                 i++;
             })
         })
 }
 displayCards("mygems");
+
 
 function uploadGemPic() {
     // Let's assume my storage is only enabled for authenticated users 
