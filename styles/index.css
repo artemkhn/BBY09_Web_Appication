@@ -115,3 +115,9 @@ color: lightblue;
   margin-right: 1%;
   border-radius: 10%;
 }
+
+#cardlink{
+  text-decoration: none;
+  color: black;
+}
+
