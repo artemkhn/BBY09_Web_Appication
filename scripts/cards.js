@@ -1,10 +1,9 @@
 function writeCards() {
-    //define a variable for the collection you want to create in Firestore to populate data
     var cardsRef = db.collection("restaurants");
 
     cardsRef.add({
         code: "010",
-        name: "Time & Place", //replace with your own city?
+        name: "Time & Place", 
         city: "Burnaby",
         province: "BC",
         price: "$$",
@@ -12,7 +11,7 @@ function writeCards() {
     });
     cardsRef.add({
         code: "011",
-        name: "Isami Sushi", //replace with your own city?
+        name: "Isami Sushi", 
         city: "Surrey",
         province: "BC",
         price: "$$",
@@ -20,7 +19,7 @@ function writeCards() {
     });
     cardsRef.add({
         code: "012",
-        name: "Tenen Restaurant", //replace with your own city?
+        name: "Tenen Restaurant", 
         city: "Burnaby",
         province: "BC",
         price: "$$",
@@ -50,7 +49,7 @@ function displayCards() {
                 var testGemCard = cardTemplate.content.cloneNode(true);
                 testGemCard.querySelector('.card-title').innerHTML = name;
                 testGemCard.querySelector('.card-length').innerHTML = description;
-                testGemCard.querySelector('a').onclick = () => setHikeData(gemID);
+                testGemCard.querySelector('a').onclick = () => setLikeData(gemID);
                 testGemCard.querySelector('i').onclick = () => addLikes(gemID);
                 testGemCard.querySelector('.read-more').href = "eachGem.html?gemName="+name +"&id=" + gemID + "&description=" + description + "&image=" + image + "&city=" + city + "&province=" + province + "&patio=" + patio + "&reservation=" + reservation + "&likes=" + likes;
                 testGemCard.querySelector('img').src = "/images/" + image + ".jpg";
@@ -67,7 +66,7 @@ function displayCards() {
 
 }
 
-function setHikeData(code) {
+function setLikeData(code) {
     localStorage.setItem('gemID', id);
 }
 
@@ -76,14 +75,11 @@ function addLikes(gemID) {
     db.collection("restaurants").where("id", "==", gemID)
         .get()
         .then(queryRestaurant => {
-            //see how many results you have got from the query
             size = queryRestaurant.size;
-            // get the documents of query
             restaurants = queryRestaurant.docs;
             if (size = 1) {
                 id = restaurants[0].id;
                 console.log(id);
-                //update method will add to the specified field in database, if that field does not exist, it will create that.
                 db.collection("restaurants").doc(id).update({
                     //Firebase documentation has this method for incrementation.
                     likes: firebase.firestore.FieldValue.increment(1)

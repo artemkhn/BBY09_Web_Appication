@@ -85,12 +85,12 @@
     <br>
     <h1 id="userview">MyProfile</h1>
     <div class="container text-center py-3">
-      <img id="mypic-goes-here" src="images/blah.jpg" width=50 height=50 />
+      <img id="mypic-goes-here" src="../images/blah.jpg" width=50 height=50 />
       <input type="file" accept="image/*" id="gempicfile"/>
       <br>
       <br>
       <br>
-      <img class="mx-auto d-block" id="image-goes-here" src=""  width="300px"/>
+      <img class="mx-auto d-block" id="image-goes-here" width="300" height="300"/>
     </div>
     <form id="userProfile">
         <fieldset class="mb-3" id="profilefeilds" disabled>
@@ -139,7 +139,7 @@
               <p class="card-length">Some quick example text to build on the card title and make up the bulk of the
                 card's content.</p>
               <a class="btn btn-primary read-more" style="float: right">Read more</a>
-              <i style="float: left"><img src="/images/heart.png"></i>
+              <i style="float: left"><img src="../images/heart.png"></i>
             </div>
           </div>
         </template>
@@ -217,6 +217,8 @@
   <script src="../scripts/authentication.js"></script>
   <script src="../scripts/cards.js"></script>
   <script src="../scripts/main.js"></script>
+  <script src="../scripts/display-user-cards.js"></script>
+  <script src="../scripts/profile-pic.js"></script>
 </body>
 
 </html>
