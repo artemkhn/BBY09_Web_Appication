@@ -18,7 +18,7 @@ function uploadUserPic() {
             var storageRef = storage.ref("images/" + user.uid + ".jpg");
 
             //upload the picked file
-            storageRef.child("file.jpg").put(file)
+            storageRef.put(file)
                 .then(function  (snap) {
                     console.log('Uploaded to Cloud Storage.');
                     storageRef.getDownloadURL()
