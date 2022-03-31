@@ -145,7 +145,7 @@ h5 {
 
 
 .mobile-nav {
-  background: #F1F1F1;
+  background: #fffbee;
   position: fixed;
   bottom: 0;
   height: 65px;
@@ -205,6 +205,10 @@ h5 {
   footer{
     visibility: hidden;
   }
+}
+
+.btn-success{
+  background-color: #c7b4f5;
 }
 
 

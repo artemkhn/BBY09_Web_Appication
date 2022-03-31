@@ -85,7 +85,7 @@
     <br>
     <h1 id="userview">MyProfile</h1>
     <div class="container text-center py-3">
-      <img id="mypic-goes-here" src="images/blah.jpg" width=50 height=50 />
+      <img id="mypic-goes-here" src="../images/blah.jpg" width=50 height=50 />
       <input type="file" accept="image/*" id="gempicfile"/>
       <br>
       <br>
@@ -117,6 +117,25 @@
             <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" type="button" class="btn btn-info"onclick="saveUserProfile()">Save</button>
         </div>
     </form>
+</div>
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Profile Sucessfully Edited!
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="location.href='./index.html'">Home</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
 </div>
 
  
@@ -156,8 +175,8 @@
     <a href="./addrestaurant.html" class="bloc-icon" id="option3">
       <img src="../images/add.png" alt="">
     </a>
-    <a href="./rewards.html" class="bloc-icon" id="option4">
-      <img src="../images/gift.png" alt="">
+    <a href="./cussupport.html" class="bloc-icon" id="option4">
+      <img src="../images/help.png" alt="">
     </a>
     <a href="./moreoptions.html" class="bloc-icon" id="option5">
       <img src="../images/application.png" alt="">
