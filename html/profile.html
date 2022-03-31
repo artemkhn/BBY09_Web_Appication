@@ -151,13 +151,14 @@
     <div class="container">
       <div id="mygems-go-here" class="row row-cols-auto justify-content-center">
         <template id="cardTemplate">
-          <div class="card m-3 align-self-center" style="width: 25rem;">
-            <img class="card-image card-img-top image-goes-here" src="..." alt="...">
+          <div class="card m-3" style="width: 25rem;">
+            <img class="card-image card-img-top rounded" src="..." alt="..." width="100px" height="200px">
             <div class="card-body">
               <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+              <p class="card-length">Some quick example text to build on the card title and make up the bulk of the
                 card's content.</p>
-              <a class="btn btn-primary card-href">Get Details</a>
+              <a class="btn btn-primary read-more" style="float: right">Read more</a>
+              <i style="float: left"><img src="/images/heart.png"></i>
             </div>
           </div>
         </template>
@@ -166,7 +167,7 @@
   </div>
 
   <nav class="mobile-nav">
-    <a href="./index.html" class="bloc-icon" id="option1">
+    <a href="../index.html" class="bloc-icon" id="option1">
       <img src="../images/home.png" alt="">
     </a>
     <a href="./profile.html" class="bloc-icon" id="option2">

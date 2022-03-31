@@ -3,7 +3,11 @@ service cloud.firestore {
   match /databases/{database}/documents {
     match /{document=**} {
       allow read, write: if
+<<<<<<< HEAD
           request.time < timestamp.date(2022, 4, 3);
+=======
+          request.time < timestamp.date(2022, 4, 30);
+>>>>>>> 7423b69ac698cbc31257f00f95d3521a859a7fcc
     }
   }
 }

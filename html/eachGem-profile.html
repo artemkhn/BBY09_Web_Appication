@@ -41,8 +41,8 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container-fluid">
-      <img class="logoimg" src="../images/MealVault.png" alt="">
-      <a class="navbar-brand" href="index.html">MealVault</a>
+      <img id="logoimg" src="../images/MealVault.png" alt="">
+      <a class="navbar-brand" href="index.html"><b>MealVault</b></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -83,128 +83,22 @@
 
 
   <div class="px-4start py-5 my-5 text-center xx">
-    <br>
-    <br>
-    <!-- <img  src="./images/MealVault.png" alt="" width="125px" height="100px"> -->
-    <!-- <h1 class="display-5 fw-bold heading1">MealVault</h1> -->
-    <div class="col-lg-6 mx-auto">
-      <p class="lead mb-4 welcome">Welcome, <span class="name-goes-here"></span></p>
-      <br>
-      <!-- <form class="d-flex">
-        <a id="preferencesbutton" href="preferences.html"><img id="preferences" src="./images/preferences.png"
-            alt=""></a>
-        <input id="search" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <input class="form-control me-2" type="search" placeholder="Location (ex. Vancouver, BC)" aria-label="Search">
-        <button class="btn btn-outline-success" id="searchButton" type="submit">Search</button>
-      </form> -->
-      <br>
-      <h1>Filter By</h1>
-      <br>
-      <br>
-      <form class="d-flex">
-        <h2 class="filter">City: </h2>
-        <div>
-          <button class="btn btn-outline-success filterbtn" type="button" onclick="searchVancouver()">Vancouver</button>
-          <button class="btn btn-outline-success filterbtn" type="button" onclick="searchBurnaby()">Burnaby</button>
-          <button class="btn btn-outline-success filterbtn" type="button" onclick="searchLangley()">Langley</button>
-          <button class="btn btn-outline-success filterbtn" type="button" onclick="searchSurrey()">Surrey</button>
-        </div>
-      </form>
-      <br />
-      <form class="d-flex">
-        <h2 class="filter">Price: </h2>
-        <div>
-          <button class="btn btn-outline-success px-2 filterbtn" type="button" onclick="search$()">$</button>
-          <button class="btn btn-outline-success px-2 filterbtn" type="button" onclick="search$$()">$$</button>
-          <button class="btn btn-outline-success px-2 filterbtn" type="button" onclick="search$$$()">$$$</button>
-          <button class="btn btn-outline-success px-2 filterbtn" type="button" onclick="search$$$$()">$$$$</button>
-        </div>
-      </form>
-      <br>
-      <form action="index.html">
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-          clear
-        </button>
-      </form>
-      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header text-center">
-              <h5 class="modal-title w-100" id="exampleModalLabel">Are you sure?</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-footer text-center">
-              <form action="index.html" class="w-100 text-center">
-                <button type="submit" class="btn btn-primary w-100 text-center" hred>Clear</button>
-              </form>
-              <button type="button" class="btn btn-secondary bg-danger w-100 text-center" data-bs-dismiss="modal">Close</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <br>
-      <br>
-      <h1>Show All</h1>
-
-      <button class="btn btn-outline-success" type="button" onclick="displayCards()"><a id="cardlink"
-          href="#gemCardGroup">Get Suggestions</a></button>
-      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-        <!-- <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Primary button</button> -->
-        <!-- <button type="button" class="btn btn-outline-secondary btn-lg px-4">Secondary</button> -->
-        <br>
-        <br>
-
-        <br>
-        <br>
-        <br>
-      </div>
-    </div>
-  </div>
-  <div class="container" id="seecards">
-    <h1 class="d-flex justify-content-center align-content-center">Hidden Gems</h1>
-    <p class="d-flex justify-content-center align-content-center">What are you waiting
-      for? Add your own!</p>
-    <div class="d-flex flex-column align-items-center" id="addpost">
-      <a id="addapost" href="addrestaurant.html"><img src="../images/addpost.png"></a>
-      <p>Add your gem</p>
-    </div>
-    <!-- Here is container for cards  -->
     <div class="container">
-      <div id="gemCardGroup" class="row row-cols-auto justify-content-center rounded">
-        <template id="cardTemplate">
-          <div class="card m-3" style="width: 25rem;">
-            <img class="card-image card-img-top rounded" src="..." alt="..." width="100px" height="200px">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-length">Some quick example text to build on the card title and make up the bulk of the
-                card's content.</p>
-              <a class="btn btn-primary read-more" style="float: right">Read more</a>
-              <i onclick="addLikes(gemID)" style="float: left"><img src="../images/heart.png"></i>
-            </div>
-          </div>
-        </template>
-
-      </div>
+      <br>
+      <h1><span id="gemName"></span></h1>
+      <img id="img" src="" width="300px" height="300px">
+      <h2 id="idGoesHere"></h2>
+      <h2 id="nameGoesHere"></h2>
+      <h2 id="city"></h2>
+      <h2 id="province"></h2>
+      <h2 id="patio"></h2>
+      <h2 id="reservation"></h2>
+      <h2 id="likes"></h2>
+      <h3 id="descriptionGoesHere"></h3>
+      <br>
+      <br>
     </div>
   </div>
-
-  <nav class="mobile-nav">
-    <a href="./index.html" class="bloc-icon" id="option1">
-      <img src="../images/home.png" alt="">
-    </a>
-    <a href="./profile.html" class="bloc-icon" id="option2">
-      <img src="../images/profile.png" alt="">
-    </a>
-    <a href="./addrestaurant.html" class="bloc-icon" id="option3">
-      <img src="../images/add.png" alt="">
-    </a>
-    <a href="./cussupport.html" class="bloc-icon" id="option4">
-      <img src="../images/help.png" alt="">
-    </a>
-    <a href="./moreoptions.html" class="bloc-icon" id="option5">
-      <img src="../images/application.png" alt="">
-    </a>
-  </nav>
 
 
 
@@ -260,8 +154,7 @@
   <script src="../scripts/firebaseAPI.js"></script>
   <script src="../scripts/cards.js"></script>
   <script src="../scripts/authentication.js"></script>
-  <script src="../scripts/main.js"></script>
-  <script src="../scripts/search.js"></script>
+  <script src="../scripts/readmore-profile.js"></script>
 </body>
 
 </html>
