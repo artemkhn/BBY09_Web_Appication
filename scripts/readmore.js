@@ -15,9 +15,9 @@ function showDetails() {
     let gemReservation = "&nbsp Reservation needed:" + reservation;
     let gemPatio = "&nbsp Patio:" + patio;
     let gemProvince = "&nbsp Province:" + province;
-    let gemCity = "&nbsp City:" + city;
+    let gemCity = "&nbsp Location: " + city + "," + province;
     let idTag = "&nbsp ID:" + id;           //build message to display
-    let descriptionTag = "&nbsp Description:" + gemDescription;
+    let descriptionTag = gemDescription;
     document.getElementById("gemName").innerHTML = gemName;  
     document.getElementById("idGoesHere").innerHTML = idTag;
     document.getElementById("descriptionGoesHere").innerHTML = descriptionTag;

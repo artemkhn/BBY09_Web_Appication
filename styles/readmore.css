@@ -1,0 +1,12 @@
+#restname{
+    font-size: 40px;
+}
+
+#idGoesHere{
+    visibility: hidden;
+}
+
+.px-4read{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.658), rgba(0, 0, 0, 0.452)), url(../images/back.jpg);
+    color: white;
+  }
