@@ -104,9 +104,21 @@ Firebase hosting files:
 
 ## Resources
 - In-app icons from Feather v4.28.0 (Open Source https://feathericons.com/)
-- In-app icons from Flaticon (https://www.flaticon.com/)
+- add.png, addpost.png, application.png, heart.png from flaticon(https://www.flaticon.com/)
+- help.png, home.png, preferences.png, profile.png, user.png from flaticon (https://www.flaticon.com/)
 - Logo homemade!
-- Images from google images (https://www.google.ca/)
+- Image 001.jpg by Jason Leung on Unsplash (https://unsplash.com/)
+- Image 002.jpg by shawnanggg on Unsplash (https://unsplash.com/)
+- Image 003.jpg by Volkan Vardar on Unsplash (https://unsplash.com/)
+- Image 004.jpg by Bundo Kim on Unsplash (https://unsplash.com/)
+- Image 005.jpg by piotr szulawski on Unsplash (https://unsplash.com/)
+- Image 006.jpg by kayleigh harrington on Unsplash (https://unsplash.com/)
+- Image 007.jpg by Sandra Seitamaa on Unsplash (https://unsplash.com/)
+- Image 008.jpg by Favour Otunji on Unsplash (https://unsplash.com/)
+- Image 009.jpg by Syed Ahmad on Unsplash (https://unsplash.com/)
+- Image 010.jpg by Albert on Unsplash (https://unsplash.com/)
+- Image 011.jpg by Simon Karemann on Unsplash (https://unsplash.com/)
+- Image 012.jpg by Klara Kulikova on Unsplash (https://unsplash.com/)
 
 ## Contact 
 * Artem Khan - akhan195@my.bcit.ca
