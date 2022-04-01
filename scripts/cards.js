@@ -51,7 +51,7 @@ function displayCards() {
                 testGemCard.querySelector('.card-length').innerHTML = description;
                 testGemCard.querySelector('a').onclick = () => setLikeData(gemID);
                 testGemCard.querySelector('i').onclick = () => addLikes(gemID);
-                testGemCard.querySelector('.read-more').href = "eachGem.html?gemName="+name +"&id=" + gemID + "&description=" + description + "&image=" + image + "&city=" + city + "&province=" + province + "&patio=" + patio + "&reservation=" + reservation + "&likes=" + likes;
+                testGemCard.querySelector('.read-more').href = "/html/eachGem.html?gemName="+name +"&id=" + gemID + "&description=" + description + "&image=" + image + "&city=" + city + "&province=" + province + "&patio=" + patio + "&reservation=" + reservation + "&likes=" + likes;
                 testGemCard.querySelector('img').src = "/images/" + image + ".jpg";
 
                 //give unique ids to all elements for future use
