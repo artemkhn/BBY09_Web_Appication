@@ -1,5 +1,6 @@
 var currentUser;
 
+//gets the user's info from the database and displayes it
 function populateProfile() {
     firebase.auth().onAuthStateChanged(user => {
 
@@ -39,9 +40,8 @@ function populateProfile() {
 
 populateProfile();
 
-
+//allows the user to edit personal information
 function editUserProfile() {
-    //Enable the form fields
     document.getElementById('profilefeilds').disabled = false;
  }
 
@@ -61,7 +61,6 @@ function editUserProfile() {
             console.log("Document successfully updated!");
         })
 
-    //Enable the form fields
     document.getElementById('profilefeilds').disabled = true;
 }
 

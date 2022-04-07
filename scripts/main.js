@@ -1,49 +1,39 @@
+//inserts the name of the logged in user to the specified location in html
 function insertName() {
+    //checks if the user is logged in
     firebase.auth().onAuthStateChanged(user => {
-        // Check if user is signed in:
         if (user) {                                                                 
-            // Do something for the current logged-in user here: 
             console.log(user.uid);
-            //go to the correct user document by referencing to the user uid
             currentUser = db.collection("users").doc(user.uid);
-            //get the document for current user.
+            //gets the current user
             currentUser.get()
                   .then(userDoc => {
                var user_Name = userDoc.data().name;
                console.log(user_Name);
-               //method #1:  insert with html only
-               //document.getElementById("name-goes-here").innerText = user_Name;    //using javascript
-               //method #2:  insert using jquery
-               $(".name-goes-here").text(user_Name);                         //using jquery
+
+               $(".name-goes-here").text(user_Name);                        
             })
         } else {
-            // No user is signed in.
         }
     });
 }
 insertName(); 
 
-
+//inserts the email of the logged in user to the specified location in html
 function insertEmail() {
     firebase.auth().onAuthStateChanged(user => {
-        // Check if user is signed in:
         if (user) {                                                                 
-            // Do something for the current logged-in user here: 
             console.log(user.uid);
-            //go to the correct user document by referencing to the user uid
             currentUser = db.collection("users").doc(user.uid);
-            //get the document for current user.
+            //gets the current user email
             currentUser.get()
                   .then(userDoc => {
                var user_Email = userDoc.data().email;
                console.log(user_Email);
-               //method #1:  insert with html only
-               //document.getElementById("name-goes-here").innerText = user_Name;    //using javascript
-               //method #2:  insert using jquery
-               $(".email-goes-here").text(user_Email);                         //using jquery
+        
+               $(".email-goes-here").text(user_Email);                         
             })
         } else {
-            // No user is signed in.
         }
     });
 }

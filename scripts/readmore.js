@@ -1,8 +1,9 @@
+//displays deatils of each suggestion
 function showDetails() {
 
     let params = new URL(window.location.href);
-    let id = params.searchParams.get("id");               //parse "id"
-    let gemName = params.searchParams.get("gemName");   //parse "collection"
+    let id = params.searchParams.get("id");               
+    let gemName = params.searchParams.get("gemName");   
     let gemDescription = params.searchParams.get("description");
     let gemImage = params.searchParams.get("image");
     let city = params.searchParams.get("city");

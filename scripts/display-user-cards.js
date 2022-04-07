@@ -1,13 +1,15 @@
+//Displayes the posts added by the specific user
 function displayCards(collection) {
     let cardTemplate = document.getElementById("cardTemplate");
 
     db.collection(collection).get()
+        //iterates through eact gem
         .then(snap => {
             var i = 1;
-            snap.forEach(doc => { //iterate thru each doc
-                var name = doc.data().name; // get value of the "name" key
-                var description = doc.data().description; // get value of the "details" key
-                var gemID = doc.data().id; //gets the unique ID field
+            snap.forEach(doc => { 
+                var name = doc.data().name; 
+                var description = doc.data().description; 
+                var gemID = doc.data().id; 
                 var image = doc.data().image;
                 var city = doc.data().city;
                 var province = doc.data().province;
@@ -20,7 +22,7 @@ function displayCards(collection) {
                 testGemCard.querySelector('.card-length').innerHTML = description;
                 testGemCard.querySelector('.read-more').href = "eachGem-profile.html?gemName=" + name + "&description=" + description + "&image=" + image + "&city=" + city + "&province=" + province + "&patio=" + patio + "&reservation=" + reservation;
                 testGemCard.querySelector('img').src = "/images/" + image + ".jpg";
-
+                //creates a new card with gem
                 document.getElementById(collection + "-go-here").appendChild(testGemCard);
                 i++;
             })

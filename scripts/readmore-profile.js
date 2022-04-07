@@ -1,7 +1,8 @@
+//displays details of each post 
 function showDetails() {
 
     let params = new URL(window.location.href);          
-    let gemName = params.searchParams.get("gemName");   //parse "collection"
+    let gemName = params.searchParams.get("gemName");  
     let gemDescription = params.searchParams.get("description");
     let gemImage = params.searchParams.get("image");
     let city = params.searchParams.get("city");

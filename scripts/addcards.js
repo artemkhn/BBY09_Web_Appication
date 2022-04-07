@@ -1,3 +1,4 @@
+//Stores the information added by the user and addss to the firebase
 function writeReview() {
     let name = document.getElementById("name").value;
     let city = document.getElementById("city").value;
@@ -9,6 +10,7 @@ function writeReview() {
     let patio = document.querySelector('input[name="patio"]:checked').value;
     let reservation = document.querySelector('input[name="reservation"]:checked').value;
 
+    //checks if the user is logged in
     firebase.auth().onAuthStateChanged(user => {
         if (user) {
             var currentUser = db.collection("users").doc(user.uid);
@@ -16,7 +18,7 @@ function writeReview() {
             //get the document for current user.
             currentUser.get()
                 .then(userDoc => {
-                    // Start a new collection and add all data in it.
+                    // Creates a new collection and add the inputed information
                     db.collection("mygems").add({
                             user: userID,
                             name: name,
@@ -33,7 +35,7 @@ function writeReview() {
                         });
                 })
         } else {
-            // No user is signed in.
+            // No user is logged in.
             console.log("no user signed in");
         }
     });

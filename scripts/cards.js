@@ -1,6 +1,7 @@
+//creates a set of cards and adds to the database
 function writeCards() {
     var cardsRef = db.collection("restaurants");
-
+    //indivudial card
     cardsRef.add({
         code: "010",
         name: "Time & Place", 
@@ -9,6 +10,7 @@ function writeCards() {
         price: "$$",
         description: "Time & Place is the place to gather and graze over an array of mains, sharable plates, and casual handhelds all prepared to perfection."
     });
+    //indivudial card
     cardsRef.add({
         code: "011",
         name: "Isami Sushi", 
@@ -17,6 +19,7 @@ function writeCards() {
         price: "$$",
         description: "Straightforward Japanese restaurant serving sushi, sashimi & hot entrees like teriyaki & tempura."
     });
+    //indivudial card
     cardsRef.add({
         code: "012",
         name: "Tenen Restaurant", 
@@ -27,17 +30,19 @@ function writeCards() {
     });
 }
 
+//retrives the information from the database and displayes it in the html
 function displayCards() {
     let cardTemplate = document.getElementById("cardTemplate");
     let gemCardGroup = document.getElementById("gemCardGroup");
 
-
+    //finds the specific collection and itterates through it
     db.collection("restaurants").get()
+        //iterates through each restaurant
         .then(allRestaurants => {
-            allRestaurants.forEach(doc => { //iterate thru each doc
-                var name = doc.data().name; // get value of the "name" key
-                var description = doc.data().description; // get value of the "details" key
-                var gemID = doc.data().id; //gets the unique ID field
+            allRestaurants.forEach(doc => { 
+                var name = doc.data().name; 
+                var description = doc.data().description; 
+                var gemID = doc.data().id; 
                 var image = doc.data().image;
                 var city = doc.data().city;
                 var province = doc.data().province;
@@ -45,7 +50,7 @@ function displayCards() {
                 var reservation = doc.data().reservation;
                 var likes = doc.data().likes;
 
-                //update title and text and image
+                //adds the retrieved data to specified places
                 var testGemCard = cardTemplate.content.cloneNode(true);
                 testGemCard.querySelector('.card-title').innerHTML = name;
                 testGemCard.querySelector('.card-length').innerHTML = description;
@@ -54,12 +59,6 @@ function displayCards() {
                 testGemCard.querySelector('.read-more').href = "/html/eachGem.html?gemName="+name +"&id=" + gemID + "&description=" + description + "&image=" + image + "&city=" + city + "&province=" + province + "&patio=" + patio + "&reservation=" + reservation + "&likes=" + likes;
                 testGemCard.querySelector('img').src = "/images/" + image + ".jpg";
 
-                //give unique ids to all elements for future use
-                // newcard.querySelector('.card-title').setAttribute("id", "ctitle" + i);
-                // newcard.querySelector('.card-text').setAttribute("id", "ctext" + i);
-                // newcard.querySelector('.card-image').setAttribute("id", "cimage" + i);
-
-                //attach to gallery
                 gemCardGroup.appendChild(testGemCard);
             })
         })
@@ -70,6 +69,7 @@ function setLikeData(code) {
     localStorage.setItem('gemID', id);
 }
 
+//adds likes to the item with specific gemID
 function addLikes(gemID) {
     console.log("inside");
     db.collection("restaurants").where("id", "==", gemID)

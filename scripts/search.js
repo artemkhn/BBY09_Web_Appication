@@ -1,15 +1,12 @@
-var gemsRef = db.collection("restaurants");
-
-var query = gemsRef.where("city", "==", "Vancouver");
+//Searches for restaurants only in vancouver
 function searchVancouver() {
     db.collection("restaurants").where("city", "==", "Vancouver")
     .get()
     .then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
-            // doc.data() is never undefined for query doc snapshots
-            var name = doc.data().name; // get value of the "name" key
-            var description = doc.data().description; // get value of the "details" key
-            var gemID = doc.data().id; //gets the unique ID field
+            var name = doc.data().name; 
+            var description = doc.data().description; 
+            var gemID = doc.data().id; 
             var image = doc.data().image;
             var city = doc.data().city;
             var province = doc.data().province;
@@ -17,7 +14,6 @@ function searchVancouver() {
             var reservation = doc.data().reservation;
             var likes = doc.data().likes;
 
-            //update title and text and image
             var testGemCard = cardTemplate.content.cloneNode(true);
             testGemCard.querySelector('.card-title').innerHTML = name;
             testGemCard.querySelector('.card-length').innerHTML = description;
@@ -35,15 +31,15 @@ function searchVancouver() {
 
 }
 
+//Searches for restaurants in Burnaby 
 function searchBurnaby() {
     db.collection("restaurants").where("city", "==", "Burnaby")
     .get()
     .then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
-            // doc.data() is never undefined for query doc snapshots
-            var name = doc.data().name; // get value of the "name" key
-                var description = doc.data().description; // get value of the "details" key
-                var gemID = doc.data().id; //gets the unique ID field
+            var name = doc.data().name; 
+                var description = doc.data().description; 
+                var gemID = doc.data().id; 
                 var image = doc.data().image;
                 var city = doc.data().city;
                 var province = doc.data().province;
@@ -51,7 +47,6 @@ function searchBurnaby() {
                 var reservation = doc.data().reservation;
                 var likes = doc.data().likes;
 
-                //update title and text and image
                 var testGemCard = cardTemplate.content.cloneNode(true);
                 testGemCard.querySelector('.card-title').innerHTML = name;
                 testGemCard.querySelector('.card-length').innerHTML = description;
@@ -60,12 +55,6 @@ function searchBurnaby() {
                 testGemCard.querySelector('.read-more').href = "/html/eachGem.html?gemName="+name +"&id=" + gemID + "&description=" + description + "&image=" + image + "&city=" + city + "&province=" + province + "&patio=" + patio + "&reservation=" + reservation + "&likes=" + likes;
                 testGemCard.querySelector('img').src = "/images/" + image + ".jpg";
 
-                //give unique ids to all elements for future use
-                // newcard.querySelector('.card-title').setAttribute("id", "ctitle" + i);
-                // newcard.querySelector('.card-text').setAttribute("id", "ctext" + i);
-                // newcard.querySelector('.card-image').setAttribute("id", "cimage" + i);
-
-                //attach to gallery
                 gemCardGroup.appendChild(testGemCard);
         });
     })
@@ -75,15 +64,15 @@ function searchBurnaby() {
 
 }
 
+//Searches for restaurants in Langley
 function searchLangley() {
     db.collection("restaurants").where("city", "==", "Langley")
     .get()
     .then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
-            // doc.data() is never undefined for query doc snapshots
-            var name = doc.data().name; // get value of the "name" key
-                var description = doc.data().description; // get value of the "details" key
-                var gemID = doc.data().id; //gets the unique ID field
+            var name = doc.data().name; 
+                var description = doc.data().description; 
+                var gemID = doc.data().id; 
                 var image = doc.data().image;
                 var city = doc.data().city;
                 var province = doc.data().province;
@@ -91,7 +80,6 @@ function searchLangley() {
                 var reservation = doc.data().reservation;
                 var likes = doc.data().likes;
 
-                //update title and text and image
                 var testGemCard = cardTemplate.content.cloneNode(true);
                 testGemCard.querySelector('.card-title').innerHTML = name;
                 testGemCard.querySelector('.card-length').innerHTML = description;
@@ -100,12 +88,6 @@ function searchLangley() {
                 testGemCard.querySelector('.read-more').href = "/html/eachGem.html?gemName="+name +"&id=" + gemID + "&description=" + description + "&image=" + image + "&city=" + city + "&province=" + province + "&patio=" + patio + "&reservation=" + reservation + "&likes=" + likes;
                 testGemCard.querySelector('img').src = "/images/" + image + ".jpg";
 
-                //give unique ids to all elements for future use
-                // newcard.querySelector('.card-title').setAttribute("id", "ctitle" + i);
-                // newcard.querySelector('.card-text').setAttribute("id", "ctext" + i);
-                // newcard.querySelector('.card-image').setAttribute("id", "cimage" + i);
-
-                //attach to gallery
                 gemCardGroup.appendChild(testGemCard);
         });
     })
@@ -120,10 +102,9 @@ function searchSurrey() {
     .get()
     .then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
-            // doc.data() is never undefined for query doc snapshots
-            var name = doc.data().name; // get value of the "name" key
-                var description = doc.data().description; // get value of the "details" key
-                var gemID = doc.data().id; //gets the unique ID field
+            var name = doc.data().name; 
+                var description = doc.data().description; 
+                var gemID = doc.data().id; 
                 var image = doc.data().image;
                 var city = doc.data().city;
                 var province = doc.data().province;
@@ -131,7 +112,6 @@ function searchSurrey() {
                 var reservation = doc.data().reservation;
                 var likes = doc.data().likes;
 
-                //update title and text and image
                 var testGemCard = cardTemplate.content.cloneNode(true);
                 testGemCard.querySelector('.card-title').innerHTML = name;
                 testGemCard.querySelector('.card-length').innerHTML = description;
@@ -140,12 +120,6 @@ function searchSurrey() {
                 testGemCard.querySelector('.read-more').href = "/html/eachGem.html?gemName="+name +"&id=" + gemID + "&description=" + description + "&image=" + image + "&city=" + city + "&province=" + province + "&patio=" + patio + "&reservation=" + reservation + "&likes=" + likes;
                 testGemCard.querySelector('img').src = "/images/" + image + ".jpg";
 
-                //give unique ids to all elements for future use
-                // newcard.querySelector('.card-title').setAttribute("id", "ctitle" + i);
-                // newcard.querySelector('.card-text').setAttribute("id", "ctext" + i);
-                // newcard.querySelector('.card-image').setAttribute("id", "cimage" + i);
-
-                //attach to gallery
                 gemCardGroup.appendChild(testGemCard);
         });
     })
@@ -155,15 +129,15 @@ function searchSurrey() {
 
 }
 
+//Searches for restaurants with single $ sign
 function search$() {
     db.collection("restaurants").where("price", "==", "$")
     .get()
     .then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
-            // doc.data() is never undefined for query doc snapshots
-            var name = doc.data().name; // get value of the "name" key
-                var description = doc.data().description; // get value of the "details" key
-                var gemID = doc.data().id; //gets the unique ID field
+            var name = doc.data().name; 
+                var description = doc.data().description; 
+                var gemID = doc.data().id; 
                 var image = doc.data().image;
                 var city = doc.data().city;
                 var province = doc.data().province;
@@ -171,7 +145,6 @@ function search$() {
                 var reservation = doc.data().reservation;
                 var likes = doc.data().likes;
 
-                //update title and text and image
                 var testGemCard = cardTemplate.content.cloneNode(true);
                 testGemCard.querySelector('.card-title').innerHTML = name;
                 testGemCard.querySelector('.card-length').innerHTML = description;
@@ -180,13 +153,6 @@ function search$() {
                 testGemCard.querySelector('.read-more').href = "/html/eachGem.html?gemName="+name +"&id=" + gemID + "&description=" + description + "&image=" + image + "&city=" + city + "&province=" + province + "&patio=" + patio + "&reservation=" + reservation + "&likes=" + likes;
                 testGemCard.querySelector('img').src = "/images/" + image + ".jpg";
 
-
-                //give unique ids to all elements for future use
-                // newcard.querySelector('.card-title').setAttribute("id", "ctitle" + i);
-                // newcard.querySelector('.card-text').setAttribute("id", "ctext" + i);
-                // newcard.querySelector('.card-image').setAttribute("id", "cimage" + i);
-
-                //attach to gallery
                 gemCardGroup.appendChild(testGemCard);
         });
     })
@@ -196,15 +162,15 @@ function search$() {
 
 }
 
+//Searches for restaurants with $$ sign
 function search$$() {
     db.collection("restaurants").where("price", "==", "$$")
     .get()
     .then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
-            // doc.data() is never undefined for query doc snapshots
-            var name = doc.data().name; // get value of the "name" key
-                var description = doc.data().description; // get value of the "details" key
-                var gemID = doc.data().id; //gets the unique ID field
+            var name = doc.data().name; 
+                var description = doc.data().description; 
+                var gemID = doc.data().id; 
                 var image = doc.data().image;
                 var city = doc.data().city;
                 var province = doc.data().province;
@@ -212,7 +178,6 @@ function search$$() {
                 var reservation = doc.data().reservation;
                 var likes = doc.data().likes;
 
-                //update title and text and image
                 var testGemCard = cardTemplate.content.cloneNode(true);
                 testGemCard.querySelector('.card-title').innerHTML = name;
                 testGemCard.querySelector('.card-length').innerHTML = description;
@@ -220,12 +185,6 @@ function search$$() {
                 testGemCard.querySelector('i').onclick = () => addLikes(gemID);
                 testGemCard.querySelector('.read-more').href = "/html/eachGem.html?gemName="+name +"&id=" + gemID + "&description=" + description + "&image=" + image + "&city=" + city + "&province=" + province + "&patio=" + patio + "&reservation=" + reservation + "&likes=" + likes;
                 testGemCard.querySelector('img').src = "/images/" + image + ".jpg";
-                //give unique ids to all elements for future use
-                // newcard.querySelector('.card-title').setAttribute("id", "ctitle" + i);
-                // newcard.querySelector('.card-text').setAttribute("id", "ctext" + i);
-                // newcard.querySelector('.card-image').setAttribute("id", "cimage" + i);
-
-                //attach to gallery
                 gemCardGroup.appendChild(testGemCard);
         });
     })
@@ -235,15 +194,15 @@ function search$$() {
 
 }
 
+//Searches for restaurants with $$$ sign
 function search$$$() {
     db.collection("restaurants").where("price", "==", "$$$")
     .get()
     .then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
-            // doc.data() is never undefined for query doc snapshots
-            var name = doc.data().name; // get value of the "name" key
-                var description = doc.data().description; // get value of the "details" key
-                var gemID = doc.data().id; //gets the unique ID field
+            var name = doc.data().name; 
+                var description = doc.data().description; 
+                var gemID = doc.data().id; 
                 var image = doc.data().image;
                 var city = doc.data().city;
                 var province = doc.data().province;
@@ -251,7 +210,6 @@ function search$$$() {
                 var reservation = doc.data().reservation;
                 var likes = doc.data().likes;
 
-                //update title and text and image
                 var testGemCard = cardTemplate.content.cloneNode(true);
                 testGemCard.querySelector('.card-title').innerHTML = name;
                 testGemCard.querySelector('.card-length').innerHTML = description;
@@ -260,13 +218,6 @@ function search$$$() {
                 testGemCard.querySelector('.read-more').href = "/html/eachGem.html?gemName="+name +"&id=" + gemID + "&description=" + description + "&image=" + image + "&city=" + city + "&province=" + province + "&patio=" + patio + "&reservation=" + reservation + "&likes=" + likes;
                 testGemCard.querySelector('img').src = "/images/" + image + ".jpg";
 
-
-                //give unique ids to all elements for future use
-                // newcard.querySelector('.card-title').setAttribute("id", "ctitle" + i);
-                // newcard.querySelector('.card-text').setAttribute("id", "ctext" + i);
-                // newcard.querySelector('.card-image').setAttribute("id", "cimage" + i);
-
-                //attach to gallery
                 gemCardGroup.appendChild(testGemCard);
         });
     })
@@ -276,15 +227,15 @@ function search$$$() {
 
 }
 
+//Searches for restaurants with $$$$ sign
 function search$$$$() {
     db.collection("restaurants").where("price", "==", "$$$$")
     .get()
     .then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
-            // doc.data() is never undefined for query doc snapshots
-            var name = doc.data().name; // get value of the "name" key
-                var description = doc.data().description; // get value of the "details" key
-                var gemID = doc.data().id; //gets the unique ID field
+            var name = doc.data().name; 
+                var description = doc.data().description; 
+                var gemID = doc.data().id; 
                 var image = doc.data().image;
                 var city = doc.data().city;
                 var province = doc.data().province;
@@ -292,7 +243,6 @@ function search$$$$() {
                 var reservation = doc.data().reservation;
                 var likes = doc.data().likes;
 
-                //update title and text and image
                 var testGemCard = cardTemplate.content.cloneNode(true);
                 testGemCard.querySelector('.card-title').innerHTML = name;
                 testGemCard.querySelector('.card-length').innerHTML = description;
@@ -301,13 +251,6 @@ function search$$$$() {
                 testGemCard.querySelector('.read-more').href = "/html/eachGem.html?gemName="+name +"&id=" + gemID + "&description=" + description + "&image=" + image + "&city=" + city + "&province=" + province + "&patio=" + patio + "&reservation=" + reservation + "&likes=" + likes;
                 testGemCard.querySelector('img').src = "/images/" + image + ".jpg";
 
-
-                //give unique ids to all elements for future use
-                // newcard.querySelector('.card-title').setAttribute("id", "ctitle" + i);
-                // newcard.querySelector('.card-text').setAttribute("id", "ctext" + i);
-                // newcard.querySelector('.card-image').setAttribute("id", "cimage" + i);
-
-                //attach to gallery
                 gemCardGroup.appendChild(testGemCard);
         });
     })

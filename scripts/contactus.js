@@ -1,17 +1,19 @@
+//gets information from the user and stores in database
 function writeSupport() {
     let subject = document.getElementById("subject").value;
     let description = document.getElementById("description").value;
 
     let urgent = document.querySelector('input[name="urgent"]:checked').value;
-   
+    
+    //makes sure the user is loged in
     firebase.auth().onAuthStateChanged(user => {
         if (user) {
             var currentUser = db.collection("users").doc(user.uid);
             var userID = user.uid;
-            //get the document for current user.
             currentUser.get()
+                //iterates through each user
                 .then(userDoc => {
-                    // Start a new collection and add all data in it.
+                    //adds request to the collection
                     db.collection("SupportRequests").add({
                         
                         User: userID,
@@ -25,7 +27,6 @@ function writeSupport() {
                     });
                 })
         } else {
-            // No user is signed in.
             console.log("no user signed in");
         }
     });
