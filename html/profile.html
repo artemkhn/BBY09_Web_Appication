@@ -50,30 +50,11 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="post.html">Post</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="browse.html">Browse</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">
-              Other
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="rewards.html">Rewards</a></li>
-              <li><a class="dropdown-item" href="favorites.html">Favorites</a></li>
-              <li><a class="dropdown-item" href="aboutus.html">About Us</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item" href="FAQ.html">FAQ</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1"></a>
-          </li>
+          <li><a class="dropdown-item" href="../index.html">Home</a></li>
+          <li><a class="dropdown-item" href="./profile.html">Profile</a></li>
+          <li><a class="dropdown-item" href="./addrestaurant.html">Post</a></li>
+          <li><a class="dropdown-item" href="./cussupport.html">Support</a></li>
+          <li><a class="dropdown-item" href="./moreoptions.html">More</a></li>
         </ul>
 
       </div>
@@ -85,61 +66,63 @@
     <br>
     <h1 id="userview">MyProfile</h1>
     <div class="container text-center py-3">
-      <img id="mypic-goes-here" src="../images/blah.jpg" width=50 height=50 />
-      <input type="file" accept="image/*" id="gempicfile"/>
+      <img id="mypic-goes-here" src="../images/profile.png" width=50 height=50 />
+      <input type="file" accept="image/*" id="gempicfile" />
       <br>
       <br>
       <br>
-      <img class="mx-auto d-block" id="image-goes-here" width="300" height="300"/>
+      <img class="mx-auto d-block" id="image-goes-here" width="300" height="300" />
     </div>
     <form id="userProfile">
-        <fieldset class="mb-3" id="profilefeilds" disabled>
-            <div class="form-group">
-                <label>Name</label>
-                <input type="text" id="nameInput" class="form-control" placeholder="Enter your name">
-            </div>
-            <div class="form-group">
-              <label>Username</label>
-              <input type="text" id="usernameInput" class="form-control" placeholder="Enter your username">
-            </div>
-            <div class="form-group">
-                <label>Email</label>
-                <input type="text" id="emailInput" class="form-control" placeholder="Enter your email">
-            </div>
-            <div class="form-group">
-                <label>Phone</label>
-                <input type="text" id="phoneInput" class="form-control" placeholder="Enter your phone number">
-            </div>
-        </fieldset>
-        <div class="d-flex justify-content-end mt-5">
-            <button type="button" class="btn btn-secondary" onclick="editUserProfile()">Edit</button>
-            <span style="width: 10px"></span>
-            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" type="button" class="btn btn-info"onclick="saveUserProfile()">Save</button>
+      <fieldset class="mb-3" id="profilefeilds" disabled>
+        <div class="form-group">
+          <label>Name</label>
+          <input type="text" id="nameInput" class="form-control" placeholder="Enter your name">
         </div>
+        <div class="form-group">
+          <label>Username</label>
+          <input type="text" id="usernameInput" class="form-control" placeholder="Enter your username">
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="text" id="emailInput" class="form-control" placeholder="Enter your email">
+        </div>
+        <div class="form-group">
+          <label>Phone</label>
+          <input type="text" id="phoneInput" class="form-control" placeholder="Enter your phone number">
+        </div>
+      </fieldset>
+      <div class="d-flex justify-content-end mt-5">
+        <button type="button" class="btn btn-secondary" onclick="editUserProfile()">Edit</button>
+        <span style="width: 10px"></span>
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" type="button"
+          class="btn btn-info" onclick="saveUserProfile()">Save</button>
+      </div>
     </form>
-</div>
+  </div>
 
 
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel"></h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        Profile Sucessfully Edited!
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="location.href='./index.html'">Home</button>
-        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Profile Sucessfully Edited!
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+            onclick="location.href='../index.html'">Home</button>
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
- 
- 
+
+
   <div class="container">
     <br>
     <br>
